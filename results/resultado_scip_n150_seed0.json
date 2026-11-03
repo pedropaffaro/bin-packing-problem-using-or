@@ -1,0 +1,1155 @@
+{
+  "instancia": {
+    "arquivo": "instancia_saches_n150.json",
+    "n_itens": 150,
+    "m_saches_disponiveis": 150,
+    "N_max": 5,
+    "n_conflitos": 558,
+    "seed_instancia": 192
+  },
+  "configuracao_solver": {
+    "solver": "SCIP",
+    "versao": "10.0",
+    "versao_pyscipopt": "6.2.1",
+    "seed": 0,
+    "threads": 1,
+    "time_limit_s": 60
+  },
+  "status": "TIMELIMIT",
+  "tem_solucao_factivel": true,
+  "tempo_execucao_s": 60.0305,
+  "tempo_runtime_scip_s": 60.0067,
+  "nos_explorados": 1,
+  "limitantes_inferiores_simples": {
+    "cardinalidade": 30,
+    "volume": 11
+  },
+  "custo_total": 25.55,
+  "limitante_inferior_custo": 19.1687,
+  "gap_otimalidade_pct": 33.290018,
+  "n_saches_utilizados": 31,
+  "saches": [
+    {
+      "id_sache": 1,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 54.5,
+      "taxa_ocupacao_pct": 77.86,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 1,
+          "nome": "Whey Protein Concentrado",
+          "volume_cm3": 25.0
+        },
+        {
+          "id": 2,
+          "nome": "Colágeno Hidrolisado",
+          "volume_cm3": 12.0
+        },
+        {
+          "id": 3,
+          "nome": "Creatina Monohidratada",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 4,
+          "nome": "L-Glutamina",
+          "volume_cm3": 7.0
+        },
+        {
+          "id": 5,
+          "nome": "Beta-Alanina",
+          "volume_cm3": 4.5
+        }
+      ]
+    },
+    {
+      "id_sache": 2,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 23.5,
+      "taxa_ocupacao_pct": 67.14,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 6,
+          "nome": "L-Arginina",
+          "volume_cm3": 5.0
+        },
+        {
+          "id": 7,
+          "nome": "L-Carnitina em Pó",
+          "volume_cm3": 3.5
+        },
+        {
+          "id": 8,
+          "nome": "Taurina",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 9,
+          "nome": "BCAA 2:1:1",
+          "volume_cm3": 8.0
+        },
+        {
+          "id": 10,
+          "nome": "HMB (β-Hidroxi-β-Metilbutirato)",
+          "volume_cm3": 4.0
+        }
+      ]
+    },
+    {
+      "id_sache": 3,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 15.5,
+      "taxa_ocupacao_pct": 44.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 11,
+          "nome": "L-Teanina",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 12,
+          "nome": "Glicina em Pó",
+          "volume_cm3": 5.0
+        },
+        {
+          "id": 13,
+          "nome": "Peptídeos de Glutamina",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 15,
+          "nome": "Alpha-GPC 50%",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 16,
+          "nome": "Fosfatidilserina em Pó",
+          "volume_cm3": 2.0
+        }
+      ]
+    },
+    {
+      "id_sache": 4,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 16.5,
+      "taxa_ocupacao_pct": 47.14,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 14,
+          "nome": "L-Leucina Isolada",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 17,
+          "nome": "Rhodiola Rosea (Extrato)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 18,
+          "nome": "Cogumelo Lion's Mane (Juba de Leão)",
+          "volume_cm3": 3.5
+        },
+        {
+          "id": 19,
+          "nome": "Ashwagandha (Extrato KSM-66)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 20,
+          "nome": "Maca Peruana em Pó",
+          "volume_cm3": 5.0
+        }
+      ]
+    },
+    {
+      "id_sache": 5,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 19.0,
+      "taxa_ocupacao_pct": 54.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 21,
+          "nome": "Tribulus Terrestris",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 22,
+          "nome": "Extrato de Semente de Uva",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 23,
+          "nome": "Blend de Enzimas Digestivas (Lactase/Protease)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 24,
+          "nome": "Psyllium (Fibra em Pó)",
+          "volume_cm3": 10.0
+        },
+        {
+          "id": 26,
+          "nome": "Beta-Glucana de Levedura",
+          "volume_cm3": 2.5
+        }
+      ]
+    },
+    {
+      "id_sache": 6,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 21.5,
+      "taxa_ocupacao_pct": 61.43,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 25,
+          "nome": "Inulina (Prebiótico)",
+          "volume_cm3": 7.0
+        },
+        {
+          "id": 27,
+          "nome": "Betaína Anidra (TMG)",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 28,
+          "nome": "Citrato de Magnésio",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 30,
+          "nome": "Picolinato de Zinco",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 31,
+          "nome": "Carbonato de Cálcio",
+          "volume_cm3": 5.0
+        }
+      ]
+    },
+    {
+      "id_sache": 7,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 14.5,
+      "taxa_ocupacao_pct": 96.67,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 29,
+          "nome": "Bisglicinato de Magnésio",
+          "volume_cm3": 4.5
+        },
+        {
+          "id": 32,
+          "nome": "Sulfato Ferroso (Ferro)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 33,
+          "nome": "Bisglicinato de Cobre",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 34,
+          "nome": "Cloreto de Potássio",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 35,
+          "nome": "Citrato de Sódio",
+          "volume_cm3": 4.0
+        }
+      ]
+    },
+    {
+      "id_sache": 8,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 9.0,
+      "taxa_ocupacao_pct": 60.0,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 36,
+          "nome": "Vitamina C (Ácido Ascórbico)",
+          "volume_cm3": 2.5
+        },
+        {
+          "id": 37,
+          "nome": "Ácido Cítrico (Flavorizante)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 39,
+          "nome": "Vitamina D3 em Pó",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 40,
+          "nome": "Vitamina E em Pó",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 41,
+          "nome": "Complexo B Concentrado",
+          "volume_cm3": 2.0
+        }
+      ]
+    },
+    {
+      "id_sache": 9,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 12.5,
+      "taxa_ocupacao_pct": 83.33,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 38,
+          "nome": "Bicarbonato de Sódio",
+          "volume_cm3": 5.0
+        },
+        {
+          "id": 42,
+          "nome": "Coenzima Q10",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 43,
+          "nome": "Curcumina / Cúrcuma 95%",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 44,
+          "nome": "N-Acetilcisteína (NAC)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 46,
+          "nome": "Astaxantina em Pó",
+          "volume_cm3": 1.0
+        }
+      ]
+    },
+    {
+      "id_sache": 10,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 15.5,
+      "taxa_ocupacao_pct": 44.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 45,
+          "nome": "Resveratrol em Pó",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 47,
+          "nome": "Extrato de Tart Cherry",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 48,
+          "nome": "Cafeína Anidra",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 49,
+          "nome": "Extrato de Chá Verde (EGCG)",
+          "volume_cm3": 2.0
+        },
+        {
+          "id": 51,
+          "nome": "Açaí Liofilizado em Pó",
+          "volume_cm3": 8.0
+        }
+      ]
+    },
+    {
+      "id_sache": 11,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 69.9,
+      "taxa_ocupacao_pct": 99.86,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 50,
+          "nome": "Spirulina em Pó",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 52,
+          "nome": "Maltodextrina",
+          "volume_cm3": 20.0
+        },
+        {
+          "id": 53,
+          "nome": "Palatinose (Isomaltulose)",
+          "volume_cm3": 18.0
+        },
+        {
+          "id": 54,
+          "nome": "Waxy Maize",
+          "volume_cm3": 22.0
+        },
+        {
+          "id": 61,
+          "nome": "L-Carnitina em Pó (Lote 2)",
+          "volume_cm3": 3.9
+        }
+      ]
+    },
+    {
+      "id_sache": 12,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 55.8,
+      "taxa_ocupacao_pct": 79.71,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 55,
+          "nome": "Whey Protein Concentrado (Lote 2)",
+          "volume_cm3": 25.0
+        },
+        {
+          "id": 56,
+          "nome": "Colágeno Hidrolisado (Lote 2)",
+          "volume_cm3": 11.6
+        },
+        {
+          "id": 57,
+          "nome": "Creatina Monohidratada (Lote 2)",
+          "volume_cm3": 6.2
+        },
+        {
+          "id": 58,
+          "nome": "L-Glutamina (Lote 2)",
+          "volume_cm3": 8.6
+        },
+        {
+          "id": 59,
+          "nome": "Beta-Alanina (Lote 2)",
+          "volume_cm3": 4.4
+        }
+      ]
+    },
+    {
+      "id_sache": 13,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 23.2,
+      "taxa_ocupacao_pct": 66.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 60,
+          "nome": "L-Arginina (Lote 2)",
+          "volume_cm3": 5.1
+        },
+        {
+          "id": 62,
+          "nome": "Taurina (Lote 2)",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 63,
+          "nome": "BCAA 2:1:1 (Lote 2)",
+          "volume_cm3": 9.3
+        },
+        {
+          "id": 64,
+          "nome": "HMB (β-Hidroxi-β-Metilbutirato) (Lote 2)",
+          "volume_cm3": 4.9
+        },
+        {
+          "id": 65,
+          "nome": "L-Teanina (Lote 2)",
+          "volume_cm3": 0.9
+        }
+      ]
+    },
+    {
+      "id_sache": 14,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 19.3,
+      "taxa_ocupacao_pct": 55.14,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 66,
+          "nome": "Glicina em Pó (Lote 2)",
+          "volume_cm3": 4.6
+        },
+        {
+          "id": 67,
+          "nome": "Peptídeos de Glutamina (Lote 2)",
+          "volume_cm3": 6.2
+        },
+        {
+          "id": 68,
+          "nome": "L-Leucina Isolada (Lote 2)",
+          "volume_cm3": 4.7
+        },
+        {
+          "id": 69,
+          "nome": "Alpha-GPC 50% (Lote 2)",
+          "volume_cm3": 1.8
+        },
+        {
+          "id": 70,
+          "nome": "Fosfatidilserina em Pó (Lote 2)",
+          "volume_cm3": 2.0
+        }
+      ]
+    },
+    {
+      "id_sache": 15,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 16.9,
+      "taxa_ocupacao_pct": 48.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 71,
+          "nome": "Rhodiola Rosea (Extrato) (Lote 2)",
+          "volume_cm3": 1.9
+        },
+        {
+          "id": 72,
+          "nome": "Cogumelo Lion's Mane (Juba de Leão) (Lote 2)",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 73,
+          "nome": "Ashwagandha (Extrato KSM-66) (Lote 2)",
+          "volume_cm3": 2.2
+        },
+        {
+          "id": 74,
+          "nome": "Maca Peruana em Pó (Lote 2)",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 75,
+          "nome": "Tribulus Terrestris (Lote 2)",
+          "volume_cm3": 2.8
+        }
+      ]
+    },
+    {
+      "id_sache": 16,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 22.5,
+      "taxa_ocupacao_pct": 64.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 76,
+          "nome": "Extrato de Semente de Uva (Lote 2)",
+          "volume_cm3": 1.9
+        },
+        {
+          "id": 77,
+          "nome": "Blend de Enzimas Digestivas (Lactase/Protease) (Lote 2)",
+          "volume_cm3": 2.4
+        },
+        {
+          "id": 78,
+          "nome": "Psyllium (Fibra em Pó) (Lote 2)",
+          "volume_cm3": 9.3
+        },
+        {
+          "id": 79,
+          "nome": "Inulina (Prebiótico) (Lote 2)",
+          "volume_cm3": 6.6
+        },
+        {
+          "id": 80,
+          "nome": "Beta-Glucana de Levedura (Lote 2)",
+          "volume_cm3": 2.3
+        }
+      ]
+    },
+    {
+      "id_sache": 17,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 19.8,
+      "taxa_ocupacao_pct": 56.57,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 81,
+          "nome": "Betaína Anidra (TMG) (Lote 2)",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 82,
+          "nome": "Citrato de Magnésio (Lote 2)",
+          "volume_cm3": 3.8
+        },
+        {
+          "id": 83,
+          "nome": "Bisglicinato de Magnésio (Lote 2)",
+          "volume_cm3": 4.6
+        },
+        {
+          "id": 84,
+          "nome": "Picolinato de Zinco (Lote 2)",
+          "volume_cm3": 1.7
+        },
+        {
+          "id": 85,
+          "nome": "Carbonato de Cálcio (Lote 2)",
+          "volume_cm3": 5.7
+        }
+      ]
+    },
+    {
+      "id_sache": 18,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 13.8,
+      "taxa_ocupacao_pct": 92.0,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 86,
+          "nome": "Sulfato Ferroso (Ferro) (Lote 2)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 88,
+          "nome": "Cloreto de Potássio (Lote 2)",
+          "volume_cm3": 3.3
+        },
+        {
+          "id": 89,
+          "nome": "Citrato de Sódio (Lote 2)",
+          "volume_cm3": 4.2
+        },
+        {
+          "id": 90,
+          "nome": "Vitamina C (Ácido Ascórbico) (Lote 2)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 94,
+          "nome": "Vitamina E em Pó (Lote 2)",
+          "volume_cm3": 1.7
+        }
+      ]
+    },
+    {
+      "id_sache": 19,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 7.4,
+      "taxa_ocupacao_pct": 49.33,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 87,
+          "nome": "Bisglicinato de Cobre (Lote 2)",
+          "volume_cm3": 0.9
+        },
+        {
+          "id": 91,
+          "nome": "Ácido Cítrico (Flavorizante) (Lote 2)",
+          "volume_cm3": 2.2
+        },
+        {
+          "id": 93,
+          "nome": "Vitamina D3 em Pó (Lote 2)",
+          "volume_cm3": 1.1
+        },
+        {
+          "id": 95,
+          "nome": "Complexo B Concentrado (Lote 2)",
+          "volume_cm3": 1.7
+        },
+        {
+          "id": 96,
+          "nome": "Coenzima Q10 (Lote 2)",
+          "volume_cm3": 1.5
+        }
+      ]
+    },
+    {
+      "id_sache": 20,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 13.2,
+      "taxa_ocupacao_pct": 88.0,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 92,
+          "nome": "Bicarbonato de Sódio (Lote 2)",
+          "volume_cm3": 5.1
+        },
+        {
+          "id": 97,
+          "nome": "Curcumina / Cúrcuma 95% (Lote 2)",
+          "volume_cm3": 3.2
+        },
+        {
+          "id": 98,
+          "nome": "N-Acetilcisteína (NAC) (Lote 2)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 99,
+          "nome": "Resveratrol em Pó (Lote 2)",
+          "volume_cm3": 1.5
+        },
+        {
+          "id": 100,
+          "nome": "Astaxantina em Pó (Lote 2)",
+          "volume_cm3": 1.1
+        }
+      ]
+    },
+    {
+      "id_sache": 21,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 36.3,
+      "taxa_ocupacao_pct": 51.86,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 101,
+          "nome": "Extrato de Tart Cherry (Lote 2)",
+          "volume_cm3": 2.9
+        },
+        {
+          "id": 102,
+          "nome": "Cafeína Anidra (Lote 2)",
+          "volume_cm3": 1.1
+        },
+        {
+          "id": 103,
+          "nome": "Extrato de Chá Verde (EGCG) (Lote 2)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 104,
+          "nome": "Spirulina em Pó (Lote 2)",
+          "volume_cm3": 5.4
+        },
+        {
+          "id": 106,
+          "nome": "Maltodextrina (Lote 2)",
+          "volume_cm3": 24.6
+        }
+      ]
+    },
+    {
+      "id_sache": 22,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 67.3,
+      "taxa_ocupacao_pct": 96.14,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 105,
+          "nome": "Açaí Liofilizado em Pó (Lote 2)",
+          "volume_cm3": 8.5
+        },
+        {
+          "id": 107,
+          "nome": "Palatinose (Isomaltulose) (Lote 2)",
+          "volume_cm3": 17.8
+        },
+        {
+          "id": 108,
+          "nome": "Waxy Maize (Lote 2)",
+          "volume_cm3": 24.4
+        },
+        {
+          "id": 110,
+          "nome": "Colágeno Hidrolisado (Lote 3)",
+          "volume_cm3": 11.2
+        },
+        {
+          "id": 111,
+          "nome": "Creatina Monohidratada (Lote 3)",
+          "volume_cm3": 5.4
+        }
+      ]
+    },
+    {
+      "id_sache": 23,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 46.0,
+      "taxa_ocupacao_pct": 65.71,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 109,
+          "nome": "Whey Protein Concentrado (Lote 3)",
+          "volume_cm3": 23.8
+        },
+        {
+          "id": 112,
+          "nome": "L-Glutamina (Lote 3)",
+          "volume_cm3": 8.4
+        },
+        {
+          "id": 113,
+          "nome": "Beta-Alanina (Lote 3)",
+          "volume_cm3": 4.4
+        },
+        {
+          "id": 114,
+          "nome": "L-Arginina (Lote 3)",
+          "volume_cm3": 6.2
+        },
+        {
+          "id": 115,
+          "nome": "L-Carnitina em Pó (Lote 3)",
+          "volume_cm3": 3.2
+        }
+      ]
+    },
+    {
+      "id_sache": 24,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 27.2,
+      "taxa_ocupacao_pct": 77.71,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 116,
+          "nome": "Taurina (Lote 3)",
+          "volume_cm3": 3.2
+        },
+        {
+          "id": 117,
+          "nome": "BCAA 2:1:1 (Lote 3)",
+          "volume_cm3": 7.8
+        },
+        {
+          "id": 118,
+          "nome": "HMB (β-Hidroxi-β-Metilbutirato) (Lote 3)",
+          "volume_cm3": 4.2
+        },
+        {
+          "id": 120,
+          "nome": "Glicina em Pó (Lote 3)",
+          "volume_cm3": 5.3
+        },
+        {
+          "id": 121,
+          "nome": "Peptídeos de Glutamina (Lote 3)",
+          "volume_cm3": 6.7
+        }
+      ]
+    },
+    {
+      "id_sache": 25,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 9.7,
+      "taxa_ocupacao_pct": 64.67,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 119,
+          "nome": "L-Teanina (Lote 3)",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 122,
+          "nome": "L-Leucina Isolada (Lote 3)",
+          "volume_cm3": 3.5
+        },
+        {
+          "id": 123,
+          "nome": "Alpha-GPC 50% (Lote 3)",
+          "volume_cm3": 1.3
+        },
+        {
+          "id": 124,
+          "nome": "Fosfatidilserina em Pó (Lote 3)",
+          "volume_cm3": 1.9
+        },
+        {
+          "id": 125,
+          "nome": "Rhodiola Rosea (Extrato) (Lote 3)",
+          "volume_cm3": 2.0
+        }
+      ]
+    },
+    {
+      "id_sache": 26,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 15.8,
+      "taxa_ocupacao_pct": 45.14,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 126,
+          "nome": "Cogumelo Lion's Mane (Juba de Leão) (Lote 3)",
+          "volume_cm3": 3.6
+        },
+        {
+          "id": 127,
+          "nome": "Ashwagandha (Extrato KSM-66) (Lote 3)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 128,
+          "nome": "Maca Peruana em Pó (Lote 3)",
+          "volume_cm3": 5.5
+        },
+        {
+          "id": 129,
+          "nome": "Tribulus Terrestris (Lote 3)",
+          "volume_cm3": 2.7
+        },
+        {
+          "id": 130,
+          "nome": "Extrato de Semente de Uva (Lote 3)",
+          "volume_cm3": 1.7
+        }
+      ]
+    },
+    {
+      "id_sache": 27,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 27.6,
+      "taxa_ocupacao_pct": 78.86,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 131,
+          "nome": "Blend de Enzimas Digestivas (Lactase/Protease) (Lote 3)",
+          "volume_cm3": 2.3
+        },
+        {
+          "id": 132,
+          "nome": "Psyllium (Fibra em Pó) (Lote 3)",
+          "volume_cm3": 10.5
+        },
+        {
+          "id": 133,
+          "nome": "Inulina (Prebiótico) (Lote 3)",
+          "volume_cm3": 8.1
+        },
+        {
+          "id": 134,
+          "nome": "Beta-Glucana de Levedura (Lote 3)",
+          "volume_cm3": 2.6
+        },
+        {
+          "id": 135,
+          "nome": "Betaína Anidra (TMG) (Lote 3)",
+          "volume_cm3": 4.1
+        }
+      ]
+    },
+    {
+      "id_sache": 28,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 19.0,
+      "taxa_ocupacao_pct": 54.29,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 136,
+          "nome": "Citrato de Magnésio (Lote 3)",
+          "volume_cm3": 3.5
+        },
+        {
+          "id": 137,
+          "nome": "Bisglicinato de Magnésio (Lote 3)",
+          "volume_cm3": 5.5
+        },
+        {
+          "id": 138,
+          "nome": "Picolinato de Zinco (Lote 3)",
+          "volume_cm3": 1.7
+        },
+        {
+          "id": 139,
+          "nome": "Carbonato de Cálcio (Lote 3)",
+          "volume_cm3": 5.5
+        },
+        {
+          "id": 142,
+          "nome": "Cloreto de Potássio (Lote 3)",
+          "volume_cm3": 2.8
+        }
+      ]
+    },
+    {
+      "id_sache": 29,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 11.3,
+      "taxa_ocupacao_pct": 75.33,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 140,
+          "nome": "Sulfato Ferroso (Ferro) (Lote 3)",
+          "volume_cm3": 2.1
+        },
+        {
+          "id": 141,
+          "nome": "Bisglicinato de Cobre (Lote 3)",
+          "volume_cm3": 1.1
+        },
+        {
+          "id": 143,
+          "nome": "Citrato de Sódio (Lote 3)",
+          "volume_cm3": 4.1
+        },
+        {
+          "id": 144,
+          "nome": "Vitamina C (Ácido Ascórbico) (Lote 3)",
+          "volume_cm3": 2.6
+        },
+        {
+          "id": 148,
+          "nome": "Vitamina E em Pó (Lote 3)",
+          "volume_cm3": 1.4
+        }
+      ]
+    },
+    {
+      "id_sache": 30,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 4.7,
+      "taxa_ocupacao_pct": 31.33,
+      "n_itens": 3,
+      "itens": [
+        {
+          "id": 145,
+          "nome": "Ácido Cítrico (Flavorizante) (Lote 3)",
+          "volume_cm3": 2.2
+        },
+        {
+          "id": 147,
+          "nome": "Vitamina D3 em Pó (Lote 3)",
+          "volume_cm3": 1.0
+        },
+        {
+          "id": 150,
+          "nome": "Coenzima Q10 (Lote 3)",
+          "volume_cm3": 1.5
+        }
+      ]
+    },
+    {
+      "id_sache": 31,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 7.9,
+      "taxa_ocupacao_pct": 52.67,
+      "n_itens": 2,
+      "itens": [
+        {
+          "id": 146,
+          "nome": "Bicarbonato de Sódio (Lote 3)",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 149,
+          "nome": "Complexo B Concentrado (Lote 3)",
+          "volume_cm3": 1.9
+        }
+      ]
+    }
+  ]
+}

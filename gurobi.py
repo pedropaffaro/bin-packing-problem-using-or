@@ -7,6 +7,11 @@ from gurobipy import GRB
 
 PASTA_RESULTADOS = "results"
 
+# Cota superior para o número de sachês de uma solução ótima: floor(Z_FFDC / 0.50),
+# pois o ótimo custa no máximo o que a heurística custa e cada sachê custa >= 0.50.
+# Z_FFDC = 3.15 e 7.70 para n = 15 e 50.
+M_SACHES = {15: 6, 50: 15}
+
 STATUS_MAP = {
     GRB.OPTIMAL: "OPTIMAL",
     GRB.INFEASIBLE: "INFEASIBLE",
@@ -19,7 +24,8 @@ STATUS_MAP = {
 
 def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
                            seed: int = 0, threads: int = 1,
-                           caminho_saida: str = None, sufixo: str = ""):
+                           caminho_saida: str = None, sufixo: str = "",
+                           m: int = None):
     """
     Resolve o Problema de Empacotamento de Sachês Personalizados via Gurobi
     e salva os resultados em um arquivo JSON.
@@ -31,8 +37,8 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
         threads (int): Número de threads (None = padrão do Gurobi).
         caminho_saida (str): Arquivo JSON de saída. Se None, usa
             "results/resultado_gurobi_n{n}_seed{seed}{sufixo}.json".
-        sufixo (str): Texto acrescentado ao nome dos arquivos de saída e de log
-            (ex.: "_threadspadrao"), para não sobrescrever outras execuções.
+        sufixo (str): Texto acrescentado ao nome dos arquivos de saída e de log.
+        m (int): Número de sachês potenciais. Se None, usa o da instância.
 
     Retorna:
         dict com os resultados (o mesmo conteúdo salvo no JSON).
@@ -42,8 +48,13 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
         dados = json.load(f)
 
     n = dados['metadata']['n_items']
-    m = dados['metadata']['max_sachets_m']
+    if m is None:
+        m = dados['metadata']['max_sachets_m']
     N_max = dados['metadata']['max_items_per_sachet_Nmax']
+
+    if m < math.ceil(n / N_max):
+        raise ValueError(f"m = {m} é menor que o mínimo possível "
+                         f"({math.ceil(n / N_max)} sachês).")
 
     itens = dados['items']
     I = [it['id'] for it in itens]
@@ -70,14 +81,11 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
     model.setParam(GRB.Param.Seed, seed)
     if threads is not None:
         model.setParam(GRB.Param.Threads, threads)
-    model.setParam(GRB.Param.OutputFlag, 1)  # 1 para exibir log do solver no console
-    model.setParam(GRB.Param.LogFile, caminho_log)  # e também salvá-lo em arquivo
+    model.setParam(GRB.Param.OutputFlag, 1)
+    model.setParam(GRB.Param.LogFile, caminho_log)
 
     # 3. Variáveis de Decisão Binárias
-    # x[i, j] = 1 se o item i é alocado no sachê j
     x = model.addVars(I, J, vtype=GRB.BINARY, name="x")
-
-    # y[j, k] = 1 se o sachê j é ativado com o tipo/tamanho k
     y = model.addVars(J, K, vtype=GRB.BINARY, name="y")
 
     # 4. Função Objetivo: Minimizar Custo Total de Embalagens
@@ -88,21 +96,21 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
 
     # 5. Restrições do Modelo
 
-    # R1: Alocação Única (Todo item i deve ser inserido em exatamente 1 sachê)
+    # R1: Alocação Única
     for i in I:
         model.addConstr(
             gp.quicksum(x[i, j] for j in J) == 1,
             name=f"Alocacao_Unica_Item_{i}"
         )
 
-    # R2: Unicidade de Tipo por Sachê (No máximo 1 tamanho de sachê por posição j)
+    # R2: Unicidade de Tipo por Sachê
     for j in J:
         model.addConstr(
             gp.quicksum(y[j, k] for k in K) <= 1,
             name=f"Tipo_Unico_Sache_{j}"
         )
 
-    # R3: Capacidade Volumétrica (Soma dos volumes em j <= capacidade do tipo k)
+    # R3: Capacidade Volumétrica
     for j in J:
         model.addConstr(
             gp.quicksum(v[i] * x[i, j] for i in I) <= gp.quicksum(V_max[k] * y[j, k] for k in K),
@@ -110,21 +118,21 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
         )
 
     # R4: Incompatibilidade entre Ingredientes (Conflitos)
-    for idx, (i1, i2) in enumerate(E):
+    for i1, i2 in E:
         for j in J:
             model.addConstr(
                 x[i1, j] + x[i2, j] <= 1,
                 name=f"Conflito_{i1}_{i2}_Sache_{j}"
             )
 
-    # R5: Limite de Cardinalidade (Máximo N_max ingredientes por sachê)
+    # R5: Limite de Cardinalidade
     for j in J:
         model.addConstr(
             gp.quicksum(x[i, j] for i in I) <= N_max * gp.quicksum(y[j, k] for k in K),
             name=f"Cardinalidade_Sache_{j}"
         )
 
-    # R6: Quebra de Simetria (Ordena ativação dos sachês para acelerar o Branch-and-Bound)
+    # R6: Quebra de Simetria
     for j in range(1, m):
         model.addConstr(
             gp.quicksum(y[j, k] for k in K) >= gp.quicksum(y[j + 1, k] for k in K),
@@ -140,7 +148,6 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
     status_str = STATUS_MAP.get(model.Status, f"OTHER_{model.Status}")
     tem_solucao = model.SolCount > 0
 
-    # Limitantes inferiores simples, para referência
     lb_cardinalidade = math.ceil(n / N_max)
     lb_volume = math.ceil(sum(v.values()) / max(V_max.values()))
 
@@ -223,7 +230,7 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
 
     # 9. Resumo no console
     print("\n" + "=" * 60)
-    print(f"RELATÓRIO DE DESEMPENHO - GUROBI (Instância: {caminho_json})")
+    print(f"RELATÓRIO DE DESEMPENHO - GUROBI (Instância: {caminho_json}, m={m})")
     print("=" * 60)
     print(f"Status da Solução : {status_str}")
     if tem_solucao:
@@ -240,18 +247,10 @@ def resolver_saches_gurobi(caminho_json: str, time_limit: float = 60.0,
     return resultado
 
 if __name__ == "__main__":
-    # Testar com as instâncias geradas (n=15, 50, 150)
-    for n_inst in [15, 50, 150]:
+    for n_inst in [15, 50]:
         resolver_saches_gurobi(
             os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n_inst}.json"),
             time_limit=60,
             seed=0,
+            m=M_SACHES[n_inst],
         )
-
-    # Execução opcional com o número de threads padrão do Gurobi, sem sobrescrever
-    # os resultados de 1 thread (descomente para rodar):
-    # for n_inst in [50, 150]:
-    #     resolver_saches_gurobi(
-    #         os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n_inst}.json"),
-    #         time_limit=60, seed=0, threads=None, sufixo="_threadspadrao",
-    #     )

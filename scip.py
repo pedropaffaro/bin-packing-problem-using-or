@@ -7,13 +7,9 @@ from pyscipopt import Model, quicksum
 
 PASTA_RESULTADOS = "results"
 
-# Mesmo m usado no gurobi.py: floor(Z_FFDC / 0.50), cota superior válida para o
-# número de sachês de uma solução ótima (Z_FFDC = 3.15 e 7.70).
-M_SACHES = {15: 6, 50: 15}
-
 def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
                          seed: int = 0, caminho_saida: str = None,
-                         sufixo: str = "", m: int = None):
+                         sufixo: str = ""):
     """
     Resolve o Problema de Empacotamento de Sachês Personalizados via SCIP (PySCIPOpt)
     e salva os resultados em um arquivo JSON (mesmo formato usado no gurobi.py).
@@ -25,7 +21,6 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
         caminho_saida (str): Arquivo JSON de saída. Se None, usa
             "results/resultado_scip_n{n}_seed{seed}{sufixo}.json".
         sufixo (str): Texto acrescentado ao nome dos arquivos de saída e de log.
-        m (int): Número de sachês potenciais. Se None, usa o da instância.
 
     Retorna:
         dict com os resultados (o mesmo conteúdo salvo no JSON).
@@ -35,13 +30,8 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
         dados = json.load(f)
 
     n = dados['metadata']['n_items']
-    if m is None:
-        m = dados['metadata']['max_sachets_m']
+    m = dados['metadata']['max_sachets_m']
     N_max = dados['metadata']['max_items_per_sachet_Nmax']
-
-    if m < math.ceil(n / N_max):
-        raise ValueError(f"m = {m} é menor que o mínimo possível "
-                         f"({math.ceil(n / N_max)} sachês).")
 
     itens = dados['items']
     I = [it['id'] for it in itens]
@@ -64,20 +54,23 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
     model = Model("BPP_Saches_Personalizados")
     model.setParam("limits/time", time_limit)
     model.setParam("randomization/randomseedshift", seed)
-    model.setLogfile(caminho_log)
+    # model.hideOutput()  # Descomentar para ocultar o log do SCIP na consola
+    model.setLogfile(caminho_log)  # salva o log do solver em arquivo
 
     # 3. Variáveis de Decisão Binárias
+    # x[i, j] = 1 se o item i é alocado no sachê j
     x = {}
     for i in I:
         for j in J:
             x[i, j] = model.addVar(vtype="B", name=f"x_{i}_{j}")
 
+    # y[j, k] = 1 se o sachê j é ativado com o tipo/tamanho k
     y = {}
     for j in J:
         for k in K:
             y[j, k] = model.addVar(vtype="B", name=f"y_{j}_{k}")
 
-    # 4. Função Objetivo
+    # 4. Função Objetivo: Minimizar Custo Total de Embalagens
     model.setObjective(
         quicksum(c[k] * y[j, k] for j in J for k in K),
         sense="minimize"
@@ -85,21 +78,21 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
 
     # 5. Restrições do Modelo
 
-    # R1: Alocação Única
+    # R1: Alocação Única (Todo o item i deve ser inserido em exatamente 1 sachê)
     for i in I:
         model.addCons(
             quicksum(x[i, j] for j in J) == 1,
             name=f"Alocacao_Unica_Item_{i}"
         )
 
-    # R2: Unicidade de Tipo por Sachê
+    # R2: Unicidade de Tipo por Sachê (No máximo 1 tamanho de sachê por posição j)
     for j in J:
         model.addCons(
             quicksum(y[j, k] for k in K) <= 1,
             name=f"Tipo_Unico_Sache_{j}"
         )
 
-    # R3: Capacidade Volumétrica
+    # R3: Capacidade Volumétrica (Soma dos volumes em j <= capacidade do tipo k)
     for j in J:
         model.addCons(
             quicksum(v[i] * x[i, j] for i in I) <= quicksum(V_max[k] * y[j, k] for k in K),
@@ -114,14 +107,14 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
                 name=f"Conflito_{i1}_{i2}_Sache_{j}"
             )
 
-    # R5: Limite de Cardinalidade
+    # R5: Limite de Cardinalidade (Máximo N_max ingredientes por sachê)
     for j in J:
         model.addCons(
             quicksum(x[i, j] for i in I) <= N_max * quicksum(y[j, k] for k in K),
             name=f"Cardinalidade_Sache_{j}"
         )
 
-    # R6: Quebra de Simetria
+    # R6: Quebra de Simetria (Ordena a ativação dos sachês para acelerar o Branch-and-Bound)
     for j in range(1, m):
         model.addCons(
             quicksum(y[j, k] for k in K) >= quicksum(y[j + 1, k] for k in K),
@@ -137,6 +130,7 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
     status = model.getStatus()
     tem_solucao = model.getNSols() > 0
 
+    # Limitantes inferiores simples, para referência
     lb_cardinalidade = math.ceil(n / N_max)
     lb_volume = math.ceil(sum(v.values()) / max(V_max.values()))
 
@@ -159,7 +153,7 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
             "versao": versao_scip,
             "versao_pyscipopt": getattr(pyscipopt, "__version__", None),
             "seed": seed,
-            "threads": 1,
+            "threads": 1,  # o SCIP resolve em uma única thread
             "time_limit_s": time_limit,
         },
         "status": status.upper(),
@@ -227,7 +221,7 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
 
     # 9. Resumo na consola
     print("\n" + "=" * 60)
-    print(f"RELATÓRIO DE DESEMPENHO - SCIP (Instância: {caminho_json}, m={m})")
+    print(f"RELATÓRIO DE DESEMPENHO - SCIP (Instância: {caminho_json})")
     print("=" * 60)
     print(f"Status da Solução : {status.upper()}")
     if tem_solucao:
@@ -245,10 +239,10 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
     return resultado
 
 if __name__ == "__main__":
-    for n_inst in [15, 50]:
+    # Testar com as instâncias geradas (n=15, 50, 150)
+    for n_inst in [15, 50, 150]:
         resolver_saches_scip(
             os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n_inst}.json"),
             time_limit=60,
             seed=0,
-            m=M_SACHES[n_inst],
         )

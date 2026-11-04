@@ -8,7 +8,7 @@
     "seed_instancia": 92
   },
   "configuracao_solver": {
-    "solver": "Heurística FFD adaptada",
+    "solver": "Heurística FFDC",
     "deterministica": true,
     "seed": null,
     "threads": 1,
@@ -22,7 +22,7 @@
     "cardinalidade": true,
     "conflitos": true
   },
-  "tempo_execucao_s": 8.5e-05,
+  "tempo_execucao_s": 5.1e-05,
   "nos_explorados": null,
   "limitantes_inferiores_simples": {
     "cardinalidade": 10,

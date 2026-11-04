@@ -17,8 +17,8 @@
   },
   "status": "TIMELIMIT",
   "tem_solucao_factivel": true,
-  "tempo_execucao_s": 60.0305,
-  "tempo_runtime_scip_s": 60.0067,
+  "tempo_execucao_s": 60.0239,
+  "tempo_runtime_scip_s": 60.0017,
   "nos_explorados": 1,
   "limitantes_inferiores_simples": {
     "cardinalidade": 30,

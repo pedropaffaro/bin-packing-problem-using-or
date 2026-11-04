@@ -17,9 +17,9 @@
   },
   "status": "TIMELIMIT",
   "tem_solucao_factivel": true,
-  "tempo_execucao_s": 60.0013,
-  "tempo_runtime_scip_s": 60.0001,
-  "nos_explorados": 795,
+  "tempo_execucao_s": 60.2116,
+  "tempo_runtime_scip_s": 60.1979,
+  "nos_explorados": 1411,
   "limitantes_inferiores_simples": {
     "cardinalidade": 10,
     "volume": 3

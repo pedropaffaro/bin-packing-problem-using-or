@@ -1,0 +1,3165 @@
+{
+  "metadata": {
+    "description": "Instância BPP de Sachês Personalizados (n=150)",
+    "n_items": 150,
+    "max_sachets_m": 150,
+    "max_items_per_sachet_Nmax": 5,
+    "seed": 192
+  },
+  "sachet_types": [
+    {
+      "id": 1,
+      "name": "Pequeno",
+      "capacity_cm3": 15.0,
+      "cost": 0.5
+    },
+    {
+      "id": 2,
+      "name": "Médio",
+      "capacity_cm3": 35.0,
+      "cost": 0.85
+    },
+    {
+      "id": 3,
+      "name": "Grande",
+      "capacity_cm3": 70.0,
+      "cost": 1.3
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Whey Protein Concentrado",
+      "volume": 25.0,
+      "category": "protein"
+    },
+    {
+      "id": 2,
+      "name": "Colágeno Hidrolisado",
+      "volume": 12.0,
+      "category": "protein"
+    },
+    {
+      "id": 3,
+      "name": "Creatina Monohidratada",
+      "volume": 6.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 4,
+      "name": "L-Glutamina",
+      "volume": 7.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 5,
+      "name": "Beta-Alanina",
+      "volume": 4.5,
+      "category": "amino_acid"
+    },
+    {
+      "id": 6,
+      "name": "L-Arginina",
+      "volume": 5.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 7,
+      "name": "L-Carnitina em Pó",
+      "volume": 3.5,
+      "category": "amino_acid"
+    },
+    {
+      "id": 8,
+      "name": "Taurina",
+      "volume": 3.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 9,
+      "name": "BCAA 2:1:1",
+      "volume": 8.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 10,
+      "name": "HMB (β-Hidroxi-β-Metilbutirato)",
+      "volume": 4.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 11,
+      "name": "L-Teanina",
+      "volume": 1.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 12,
+      "name": "Glicina em Pó",
+      "volume": 5.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 13,
+      "name": "Peptídeos de Glutamina",
+      "volume": 6.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 14,
+      "name": "L-Leucina Isolada",
+      "volume": 4.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 15,
+      "name": "Alpha-GPC 50%",
+      "volume": 1.5,
+      "category": "nootropic"
+    },
+    {
+      "id": 16,
+      "name": "Fosfatidilserina em Pó",
+      "volume": 2.0,
+      "category": "nootropic"
+    },
+    {
+      "id": 17,
+      "name": "Rhodiola Rosea (Extrato)",
+      "volume": 2.0,
+      "category": "herbal"
+    },
+    {
+      "id": 18,
+      "name": "Cogumelo Lion's Mane (Juba de Leão)",
+      "volume": 3.5,
+      "category": "herbal"
+    },
+    {
+      "id": 19,
+      "name": "Ashwagandha (Extrato KSM-66)",
+      "volume": 2.0,
+      "category": "herbal"
+    },
+    {
+      "id": 20,
+      "name": "Maca Peruana em Pó",
+      "volume": 5.0,
+      "category": "herbal"
+    },
+    {
+      "id": 21,
+      "name": "Tribulus Terrestris",
+      "volume": 3.0,
+      "category": "herbal"
+    },
+    {
+      "id": 22,
+      "name": "Extrato de Semente de Uva",
+      "volume": 1.5,
+      "category": "antioxidant"
+    },
+    {
+      "id": 23,
+      "name": "Blend de Enzimas Digestivas (Lactase/Protease)",
+      "volume": 2.0,
+      "category": "enzyme"
+    },
+    {
+      "id": 24,
+      "name": "Psyllium (Fibra em Pó)",
+      "volume": 10.0,
+      "category": "fiber"
+    },
+    {
+      "id": 25,
+      "name": "Inulina (Prebiótico)",
+      "volume": 7.0,
+      "category": "fiber"
+    },
+    {
+      "id": 26,
+      "name": "Beta-Glucana de Levedura",
+      "volume": 2.5,
+      "category": "immunomodulator"
+    },
+    {
+      "id": 27,
+      "name": "Betaína Anidra (TMG)",
+      "volume": 4.0,
+      "category": "digestive"
+    },
+    {
+      "id": 28,
+      "name": "Citrato de Magnésio",
+      "volume": 4.0,
+      "category": "mineral"
+    },
+    {
+      "id": 29,
+      "name": "Bisglicinato de Magnésio",
+      "volume": 4.5,
+      "category": "mineral"
+    },
+    {
+      "id": 30,
+      "name": "Picolinato de Zinco",
+      "volume": 1.5,
+      "category": "mineral"
+    },
+    {
+      "id": 31,
+      "name": "Carbonato de Cálcio",
+      "volume": 5.0,
+      "category": "mineral"
+    },
+    {
+      "id": 32,
+      "name": "Sulfato Ferroso (Ferro)",
+      "volume": 2.0,
+      "category": "mineral"
+    },
+    {
+      "id": 33,
+      "name": "Bisglicinato de Cobre",
+      "volume": 1.0,
+      "category": "mineral"
+    },
+    {
+      "id": 34,
+      "name": "Cloreto de Potássio",
+      "volume": 3.0,
+      "category": "electrolyte"
+    },
+    {
+      "id": 35,
+      "name": "Citrato de Sódio",
+      "volume": 4.0,
+      "category": "electrolyte"
+    },
+    {
+      "id": 36,
+      "name": "Vitamina C (Ácido Ascórbico)",
+      "volume": 2.5,
+      "category": "vitamin_acid"
+    },
+    {
+      "id": 37,
+      "name": "Ácido Cítrico (Flavorizante)",
+      "volume": 2.0,
+      "category": "acid"
+    },
+    {
+      "id": 38,
+      "name": "Bicarbonato de Sódio",
+      "volume": 5.0,
+      "category": "alkaline"
+    },
+    {
+      "id": 39,
+      "name": "Vitamina D3 em Pó",
+      "volume": 1.0,
+      "category": "vitamin"
+    },
+    {
+      "id": 40,
+      "name": "Vitamina E em Pó",
+      "volume": 1.5,
+      "category": "vitamin"
+    },
+    {
+      "id": 41,
+      "name": "Complexo B Concentrado",
+      "volume": 2.0,
+      "category": "vitamin"
+    },
+    {
+      "id": 42,
+      "name": "Coenzima Q10",
+      "volume": 1.5,
+      "category": "antioxidant"
+    },
+    {
+      "id": 43,
+      "name": "Curcumina / Cúrcuma 95%",
+      "volume": 3.0,
+      "category": "antioxidant"
+    },
+    {
+      "id": 44,
+      "name": "N-Acetilcisteína (NAC)",
+      "volume": 2.0,
+      "category": "antioxidant"
+    },
+    {
+      "id": 45,
+      "name": "Resveratrol em Pó",
+      "volume": 1.5,
+      "category": "antioxidant"
+    },
+    {
+      "id": 46,
+      "name": "Astaxantina em Pó",
+      "volume": 1.0,
+      "category": "antioxidant"
+    },
+    {
+      "id": 47,
+      "name": "Extrato de Tart Cherry",
+      "volume": 3.0,
+      "category": "antioxidant"
+    },
+    {
+      "id": 48,
+      "name": "Cafeína Anidra",
+      "volume": 1.0,
+      "category": "stimulant"
+    },
+    {
+      "id": 49,
+      "name": "Extrato de Chá Verde (EGCG)",
+      "volume": 2.0,
+      "category": "stimulant"
+    },
+    {
+      "id": 50,
+      "name": "Spirulina em Pó",
+      "volume": 6.0,
+      "category": "superfood"
+    },
+    {
+      "id": 51,
+      "name": "Açaí Liofilizado em Pó",
+      "volume": 8.0,
+      "category": "superfood"
+    },
+    {
+      "id": 52,
+      "name": "Maltodextrina",
+      "volume": 20.0,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 53,
+      "name": "Palatinose (Isomaltulose)",
+      "volume": 18.0,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 54,
+      "name": "Waxy Maize",
+      "volume": 22.0,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 55,
+      "name": "Whey Protein Concentrado (Lote 2)",
+      "volume": 25.0,
+      "category": "protein"
+    },
+    {
+      "id": 56,
+      "name": "Colágeno Hidrolisado (Lote 2)",
+      "volume": 11.6,
+      "category": "protein"
+    },
+    {
+      "id": 57,
+      "name": "Creatina Monohidratada (Lote 2)",
+      "volume": 6.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 58,
+      "name": "L-Glutamina (Lote 2)",
+      "volume": 8.6,
+      "category": "amino_acid"
+    },
+    {
+      "id": 59,
+      "name": "Beta-Alanina (Lote 2)",
+      "volume": 4.4,
+      "category": "amino_acid"
+    },
+    {
+      "id": 60,
+      "name": "L-Arginina (Lote 2)",
+      "volume": 5.1,
+      "category": "amino_acid"
+    },
+    {
+      "id": 61,
+      "name": "L-Carnitina em Pó (Lote 2)",
+      "volume": 3.9,
+      "category": "amino_acid"
+    },
+    {
+      "id": 62,
+      "name": "Taurina (Lote 2)",
+      "volume": 3.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 63,
+      "name": "BCAA 2:1:1 (Lote 2)",
+      "volume": 9.3,
+      "category": "amino_acid"
+    },
+    {
+      "id": 64,
+      "name": "HMB (β-Hidroxi-β-Metilbutirato) (Lote 2)",
+      "volume": 4.9,
+      "category": "amino_acid"
+    },
+    {
+      "id": 65,
+      "name": "L-Teanina (Lote 2)",
+      "volume": 0.9,
+      "category": "amino_acid"
+    },
+    {
+      "id": 66,
+      "name": "Glicina em Pó (Lote 2)",
+      "volume": 4.6,
+      "category": "amino_acid"
+    },
+    {
+      "id": 67,
+      "name": "Peptídeos de Glutamina (Lote 2)",
+      "volume": 6.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 68,
+      "name": "L-Leucina Isolada (Lote 2)",
+      "volume": 4.7,
+      "category": "amino_acid"
+    },
+    {
+      "id": 69,
+      "name": "Alpha-GPC 50% (Lote 2)",
+      "volume": 1.8,
+      "category": "nootropic"
+    },
+    {
+      "id": 70,
+      "name": "Fosfatidilserina em Pó (Lote 2)",
+      "volume": 2.0,
+      "category": "nootropic"
+    },
+    {
+      "id": 71,
+      "name": "Rhodiola Rosea (Extrato) (Lote 2)",
+      "volume": 1.9,
+      "category": "herbal"
+    },
+    {
+      "id": 72,
+      "name": "Cogumelo Lion's Mane (Juba de Leão) (Lote 2)",
+      "volume": 4.0,
+      "category": "herbal"
+    },
+    {
+      "id": 73,
+      "name": "Ashwagandha (Extrato KSM-66) (Lote 2)",
+      "volume": 2.2,
+      "category": "herbal"
+    },
+    {
+      "id": 74,
+      "name": "Maca Peruana em Pó (Lote 2)",
+      "volume": 6.0,
+      "category": "herbal"
+    },
+    {
+      "id": 75,
+      "name": "Tribulus Terrestris (Lote 2)",
+      "volume": 2.8,
+      "category": "herbal"
+    },
+    {
+      "id": 76,
+      "name": "Extrato de Semente de Uva (Lote 2)",
+      "volume": 1.9,
+      "category": "antioxidant"
+    },
+    {
+      "id": 77,
+      "name": "Blend de Enzimas Digestivas (Lactase/Protease) (Lote 2)",
+      "volume": 2.4,
+      "category": "enzyme"
+    },
+    {
+      "id": 78,
+      "name": "Psyllium (Fibra em Pó) (Lote 2)",
+      "volume": 9.3,
+      "category": "fiber"
+    },
+    {
+      "id": 79,
+      "name": "Inulina (Prebiótico) (Lote 2)",
+      "volume": 6.6,
+      "category": "fiber"
+    },
+    {
+      "id": 80,
+      "name": "Beta-Glucana de Levedura (Lote 2)",
+      "volume": 2.3,
+      "category": "immunomodulator"
+    },
+    {
+      "id": 81,
+      "name": "Betaína Anidra (TMG) (Lote 2)",
+      "volume": 4.0,
+      "category": "digestive"
+    },
+    {
+      "id": 82,
+      "name": "Citrato de Magnésio (Lote 2)",
+      "volume": 3.8,
+      "category": "mineral"
+    },
+    {
+      "id": 83,
+      "name": "Bisglicinato de Magnésio (Lote 2)",
+      "volume": 4.6,
+      "category": "mineral"
+    },
+    {
+      "id": 84,
+      "name": "Picolinato de Zinco (Lote 2)",
+      "volume": 1.7,
+      "category": "mineral"
+    },
+    {
+      "id": 85,
+      "name": "Carbonato de Cálcio (Lote 2)",
+      "volume": 5.7,
+      "category": "mineral"
+    },
+    {
+      "id": 86,
+      "name": "Sulfato Ferroso (Ferro) (Lote 2)",
+      "volume": 2.3,
+      "category": "mineral"
+    },
+    {
+      "id": 87,
+      "name": "Bisglicinato de Cobre (Lote 2)",
+      "volume": 0.9,
+      "category": "mineral"
+    },
+    {
+      "id": 88,
+      "name": "Cloreto de Potássio (Lote 2)",
+      "volume": 3.3,
+      "category": "electrolyte"
+    },
+    {
+      "id": 89,
+      "name": "Citrato de Sódio (Lote 2)",
+      "volume": 4.2,
+      "category": "electrolyte"
+    },
+    {
+      "id": 90,
+      "name": "Vitamina C (Ácido Ascórbico) (Lote 2)",
+      "volume": 2.3,
+      "category": "vitamin_acid"
+    },
+    {
+      "id": 91,
+      "name": "Ácido Cítrico (Flavorizante) (Lote 2)",
+      "volume": 2.2,
+      "category": "acid"
+    },
+    {
+      "id": 92,
+      "name": "Bicarbonato de Sódio (Lote 2)",
+      "volume": 5.1,
+      "category": "alkaline"
+    },
+    {
+      "id": 93,
+      "name": "Vitamina D3 em Pó (Lote 2)",
+      "volume": 1.1,
+      "category": "vitamin"
+    },
+    {
+      "id": 94,
+      "name": "Vitamina E em Pó (Lote 2)",
+      "volume": 1.7,
+      "category": "vitamin"
+    },
+    {
+      "id": 95,
+      "name": "Complexo B Concentrado (Lote 2)",
+      "volume": 1.7,
+      "category": "vitamin"
+    },
+    {
+      "id": 96,
+      "name": "Coenzima Q10 (Lote 2)",
+      "volume": 1.5,
+      "category": "antioxidant"
+    },
+    {
+      "id": 97,
+      "name": "Curcumina / Cúrcuma 95% (Lote 2)",
+      "volume": 3.2,
+      "category": "antioxidant"
+    },
+    {
+      "id": 98,
+      "name": "N-Acetilcisteína (NAC) (Lote 2)",
+      "volume": 2.3,
+      "category": "antioxidant"
+    },
+    {
+      "id": 99,
+      "name": "Resveratrol em Pó (Lote 2)",
+      "volume": 1.5,
+      "category": "antioxidant"
+    },
+    {
+      "id": 100,
+      "name": "Astaxantina em Pó (Lote 2)",
+      "volume": 1.1,
+      "category": "antioxidant"
+    },
+    {
+      "id": 101,
+      "name": "Extrato de Tart Cherry (Lote 2)",
+      "volume": 2.9,
+      "category": "antioxidant"
+    },
+    {
+      "id": 102,
+      "name": "Cafeína Anidra (Lote 2)",
+      "volume": 1.1,
+      "category": "stimulant"
+    },
+    {
+      "id": 103,
+      "name": "Extrato de Chá Verde (EGCG) (Lote 2)",
+      "volume": 2.3,
+      "category": "stimulant"
+    },
+    {
+      "id": 104,
+      "name": "Spirulina em Pó (Lote 2)",
+      "volume": 5.4,
+      "category": "superfood"
+    },
+    {
+      "id": 105,
+      "name": "Açaí Liofilizado em Pó (Lote 2)",
+      "volume": 8.5,
+      "category": "superfood"
+    },
+    {
+      "id": 106,
+      "name": "Maltodextrina (Lote 2)",
+      "volume": 24.6,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 107,
+      "name": "Palatinose (Isomaltulose) (Lote 2)",
+      "volume": 17.8,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 108,
+      "name": "Waxy Maize (Lote 2)",
+      "volume": 24.4,
+      "category": "carbohydrate"
+    },
+    {
+      "id": 109,
+      "name": "Whey Protein Concentrado (Lote 3)",
+      "volume": 23.8,
+      "category": "protein"
+    },
+    {
+      "id": 110,
+      "name": "Colágeno Hidrolisado (Lote 3)",
+      "volume": 11.2,
+      "category": "protein"
+    },
+    {
+      "id": 111,
+      "name": "Creatina Monohidratada (Lote 3)",
+      "volume": 5.4,
+      "category": "amino_acid"
+    },
+    {
+      "id": 112,
+      "name": "L-Glutamina (Lote 3)",
+      "volume": 8.4,
+      "category": "amino_acid"
+    },
+    {
+      "id": 113,
+      "name": "Beta-Alanina (Lote 3)",
+      "volume": 4.4,
+      "category": "amino_acid"
+    },
+    {
+      "id": 114,
+      "name": "L-Arginina (Lote 3)",
+      "volume": 6.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 115,
+      "name": "L-Carnitina em Pó (Lote 3)",
+      "volume": 3.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 116,
+      "name": "Taurina (Lote 3)",
+      "volume": 3.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 117,
+      "name": "BCAA 2:1:1 (Lote 3)",
+      "volume": 7.8,
+      "category": "amino_acid"
+    },
+    {
+      "id": 118,
+      "name": "HMB (β-Hidroxi-β-Metilbutirato) (Lote 3)",
+      "volume": 4.2,
+      "category": "amino_acid"
+    },
+    {
+      "id": 119,
+      "name": "L-Teanina (Lote 3)",
+      "volume": 1.0,
+      "category": "amino_acid"
+    },
+    {
+      "id": 120,
+      "name": "Glicina em Pó (Lote 3)",
+      "volume": 5.3,
+      "category": "amino_acid"
+    },
+    {
+      "id": 121,
+      "name": "Peptídeos de Glutamina (Lote 3)",
+      "volume": 6.7,
+      "category": "amino_acid"
+    },
+    {
+      "id": 122,
+      "name": "L-Leucina Isolada (Lote 3)",
+      "volume": 3.5,
+      "category": "amino_acid"
+    },
+    {
+      "id": 123,
+      "name": "Alpha-GPC 50% (Lote 3)",
+      "volume": 1.3,
+      "category": "nootropic"
+    },
+    {
+      "id": 124,
+      "name": "Fosfatidilserina em Pó (Lote 3)",
+      "volume": 1.9,
+      "category": "nootropic"
+    },
+    {
+      "id": 125,
+      "name": "Rhodiola Rosea (Extrato) (Lote 3)",
+      "volume": 2.0,
+      "category": "herbal"
+    },
+    {
+      "id": 126,
+      "name": "Cogumelo Lion's Mane (Juba de Leão) (Lote 3)",
+      "volume": 3.6,
+      "category": "herbal"
+    },
+    {
+      "id": 127,
+      "name": "Ashwagandha (Extrato KSM-66) (Lote 3)",
+      "volume": 2.3,
+      "category": "herbal"
+    },
+    {
+      "id": 128,
+      "name": "Maca Peruana em Pó (Lote 3)",
+      "volume": 5.5,
+      "category": "herbal"
+    },
+    {
+      "id": 129,
+      "name": "Tribulus Terrestris (Lote 3)",
+      "volume": 2.7,
+      "category": "herbal"
+    },
+    {
+      "id": 130,
+      "name": "Extrato de Semente de Uva (Lote 3)",
+      "volume": 1.7,
+      "category": "antioxidant"
+    },
+    {
+      "id": 131,
+      "name": "Blend de Enzimas Digestivas (Lactase/Protease) (Lote 3)",
+      "volume": 2.3,
+      "category": "enzyme"
+    },
+    {
+      "id": 132,
+      "name": "Psyllium (Fibra em Pó) (Lote 3)",
+      "volume": 10.5,
+      "category": "fiber"
+    },
+    {
+      "id": 133,
+      "name": "Inulina (Prebiótico) (Lote 3)",
+      "volume": 8.1,
+      "category": "fiber"
+    },
+    {
+      "id": 134,
+      "name": "Beta-Glucana de Levedura (Lote 3)",
+      "volume": 2.6,
+      "category": "immunomodulator"
+    },
+    {
+      "id": 135,
+      "name": "Betaína Anidra (TMG) (Lote 3)",
+      "volume": 4.1,
+      "category": "digestive"
+    },
+    {
+      "id": 136,
+      "name": "Citrato de Magnésio (Lote 3)",
+      "volume": 3.5,
+      "category": "mineral"
+    },
+    {
+      "id": 137,
+      "name": "Bisglicinato de Magnésio (Lote 3)",
+      "volume": 5.5,
+      "category": "mineral"
+    },
+    {
+      "id": 138,
+      "name": "Picolinato de Zinco (Lote 3)",
+      "volume": 1.7,
+      "category": "mineral"
+    },
+    {
+      "id": 139,
+      "name": "Carbonato de Cálcio (Lote 3)",
+      "volume": 5.5,
+      "category": "mineral"
+    },
+    {
+      "id": 140,
+      "name": "Sulfato Ferroso (Ferro) (Lote 3)",
+      "volume": 2.1,
+      "category": "mineral"
+    },
+    {
+      "id": 141,
+      "name": "Bisglicinato de Cobre (Lote 3)",
+      "volume": 1.1,
+      "category": "mineral"
+    },
+    {
+      "id": 142,
+      "name": "Cloreto de Potássio (Lote 3)",
+      "volume": 2.8,
+      "category": "electrolyte"
+    },
+    {
+      "id": 143,
+      "name": "Citrato de Sódio (Lote 3)",
+      "volume": 4.1,
+      "category": "electrolyte"
+    },
+    {
+      "id": 144,
+      "name": "Vitamina C (Ácido Ascórbico) (Lote 3)",
+      "volume": 2.6,
+      "category": "vitamin_acid"
+    },
+    {
+      "id": 145,
+      "name": "Ácido Cítrico (Flavorizante) (Lote 3)",
+      "volume": 2.2,
+      "category": "acid"
+    },
+    {
+      "id": 146,
+      "name": "Bicarbonato de Sódio (Lote 3)",
+      "volume": 6.0,
+      "category": "alkaline"
+    },
+    {
+      "id": 147,
+      "name": "Vitamina D3 em Pó (Lote 3)",
+      "volume": 1.0,
+      "category": "vitamin"
+    },
+    {
+      "id": 148,
+      "name": "Vitamina E em Pó (Lote 3)",
+      "volume": 1.4,
+      "category": "vitamin"
+    },
+    {
+      "id": 149,
+      "name": "Complexo B Concentrado (Lote 3)",
+      "volume": 1.9,
+      "category": "vitamin"
+    },
+    {
+      "id": 150,
+      "name": "Coenzima Q10 (Lote 3)",
+      "volume": 1.5,
+      "category": "antioxidant"
+    }
+  ],
+  "conflicts": [
+    [
+      1,
+      33
+    ],
+    [
+      1,
+      76
+    ],
+    [
+      1,
+      85
+    ],
+    [
+      1,
+      96
+    ],
+    [
+      1,
+      111
+    ],
+    [
+      1,
+      119
+    ],
+    [
+      1,
+      148
+    ],
+    [
+      2,
+      60
+    ],
+    [
+      2,
+      106
+    ],
+    [
+      2,
+      111
+    ],
+    [
+      2,
+      139
+    ],
+    [
+      3,
+      29
+    ],
+    [
+      3,
+      35
+    ],
+    [
+      3,
+      37
+    ],
+    [
+      3,
+      51
+    ],
+    [
+      3,
+      64
+    ],
+    [
+      3,
+      77
+    ],
+    [
+      3,
+      80
+    ],
+    [
+      3,
+      99
+    ],
+    [
+      3,
+      107
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      4,
+      18
+    ],
+    [
+      4,
+      58
+    ],
+    [
+      4,
+      59
+    ],
+    [
+      4,
+      82
+    ],
+    [
+      4,
+      90
+    ],
+    [
+      4,
+      110
+    ],
+    [
+      4,
+      117
+    ],
+    [
+      4,
+      122
+    ],
+    [
+      4,
+      138
+    ],
+    [
+      4,
+      144
+    ],
+    [
+      4,
+      148
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      5,
+      37
+    ],
+    [
+      5,
+      112
+    ],
+    [
+      5,
+      132
+    ],
+    [
+      6,
+      107
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      7,
+      57
+    ],
+    [
+      7,
+      62
+    ],
+    [
+      7,
+      101
+    ],
+    [
+      7,
+      118
+    ],
+    [
+      7,
+      121
+    ],
+    [
+      8,
+      103
+    ],
+    [
+      8,
+      121
+    ],
+    [
+      9,
+      13
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      9,
+      19
+    ],
+    [
+      9,
+      23
+    ],
+    [
+      9,
+      91
+    ],
+    [
+      9,
+      101
+    ],
+    [
+      9,
+      120
+    ],
+    [
+      9,
+      135
+    ],
+    [
+      9,
+      150
+    ],
+    [
+      10,
+      18
+    ],
+    [
+      10,
+      73
+    ],
+    [
+      10,
+      97
+    ],
+    [
+      10,
+      125
+    ],
+    [
+      10,
+      140
+    ],
+    [
+      10,
+      143
+    ],
+    [
+      11,
+      61
+    ],
+    [
+      11,
+      83
+    ],
+    [
+      11,
+      85
+    ],
+    [
+      11,
+      86
+    ],
+    [
+      11,
+      92
+    ],
+    [
+      11,
+      98
+    ],
+    [
+      11,
+      99
+    ],
+    [
+      11,
+      125
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      12,
+      58
+    ],
+    [
+      12,
+      63
+    ],
+    [
+      12,
+      97
+    ],
+    [
+      13,
+      19
+    ],
+    [
+      13,
+      38
+    ],
+    [
+      13,
+      53
+    ],
+    [
+      13,
+      65
+    ],
+    [
+      13,
+      70
+    ],
+    [
+      13,
+      75
+    ],
+    [
+      13,
+      99
+    ],
+    [
+      13,
+      100
+    ],
+    [
+      13,
+      135
+    ],
+    [
+      14,
+      100
+    ],
+    [
+      14,
+      115
+    ],
+    [
+      14,
+      143
+    ],
+    [
+      14,
+      150
+    ],
+    [
+      15,
+      33
+    ],
+    [
+      15,
+      69
+    ],
+    [
+      15,
+      95
+    ],
+    [
+      15,
+      111
+    ],
+    [
+      15,
+      113
+    ],
+    [
+      15,
+      117
+    ],
+    [
+      15,
+      118
+    ],
+    [
+      15,
+      124
+    ],
+    [
+      15,
+      146
+    ],
+    [
+      16,
+      24
+    ],
+    [
+      16,
+      25
+    ],
+    [
+      16,
+      41
+    ],
+    [
+      16,
+      66
+    ],
+    [
+      16,
+      78
+    ],
+    [
+      16,
+      82
+    ],
+    [
+      16,
+      94
+    ],
+    [
+      16,
+      98
+    ],
+    [
+      16,
+      115
+    ],
+    [
+      16,
+      132
+    ],
+    [
+      17,
+      36
+    ],
+    [
+      17,
+      39
+    ],
+    [
+      17,
+      40
+    ],
+    [
+      17,
+      54
+    ],
+    [
+      17,
+      104
+    ],
+    [
+      17,
+      149
+    ],
+    [
+      18,
+      39
+    ],
+    [
+      18,
+      69
+    ],
+    [
+      18,
+      87
+    ],
+    [
+      18,
+      139
+    ],
+    [
+      19,
+      46
+    ],
+    [
+      19,
+      58
+    ],
+    [
+      19,
+      143
+    ],
+    [
+      20,
+      46
+    ],
+    [
+      20,
+      77
+    ],
+    [
+      20,
+      82
+    ],
+    [
+      20,
+      135
+    ],
+    [
+      21,
+      76
+    ],
+    [
+      21,
+      105
+    ],
+    [
+      21,
+      107
+    ],
+    [
+      21,
+      149
+    ],
+    [
+      22,
+      30
+    ],
+    [
+      22,
+      123
+    ],
+    [
+      22,
+      128
+    ],
+    [
+      22,
+      130
+    ],
+    [
+      22,
+      143
+    ],
+    [
+      23,
+      25
+    ],
+    [
+      23,
+      34
+    ],
+    [
+      23,
+      37
+    ],
+    [
+      23,
+      47
+    ],
+    [
+      23,
+      67
+    ],
+    [
+      23,
+      91
+    ],
+    [
+      23,
+      120
+    ],
+    [
+      23,
+      127
+    ],
+    [
+      23,
+      145
+    ],
+    [
+      24,
+      42
+    ],
+    [
+      24,
+      51
+    ],
+    [
+      24,
+      70
+    ],
+    [
+      24,
+      86
+    ],
+    [
+      24,
+      93
+    ],
+    [
+      24,
+      96
+    ],
+    [
+      24,
+      109
+    ],
+    [
+      24,
+      110
+    ],
+    [
+      24,
+      124
+    ],
+    [
+      24,
+      150
+    ],
+    [
+      25,
+      87
+    ],
+    [
+      25,
+      88
+    ],
+    [
+      25,
+      114
+    ],
+    [
+      25,
+      148
+    ],
+    [
+      26,
+      57
+    ],
+    [
+      26,
+      110
+    ],
+    [
+      26,
+      120
+    ],
+    [
+      26,
+      130
+    ],
+    [
+      26,
+      146
+    ],
+    [
+      27,
+      57
+    ],
+    [
+      27,
+      65
+    ],
+    [
+      27,
+      78
+    ],
+    [
+      27,
+      83
+    ],
+    [
+      27,
+      91
+    ],
+    [
+      27,
+      126
+    ],
+    [
+      27,
+      135
+    ],
+    [
+      27,
+      147
+    ],
+    [
+      27,
+      148
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      28,
+      52
+    ],
+    [
+      28,
+      53
+    ],
+    [
+      28,
+      54
+    ],
+    [
+      28,
+      55
+    ],
+    [
+      28,
+      66
+    ],
+    [
+      28,
+      93
+    ],
+    [
+      28,
+      100
+    ],
+    [
+      29,
+      48
+    ],
+    [
+      29,
+      74
+    ],
+    [
+      29,
+      111
+    ],
+    [
+      29,
+      117
+    ],
+    [
+      29,
+      144
+    ],
+    [
+      29,
+      150
+    ],
+    [
+      30,
+      33
+    ],
+    [
+      30,
+      61
+    ],
+    [
+      30,
+      80
+    ],
+    [
+      30,
+      87
+    ],
+    [
+      30,
+      90
+    ],
+    [
+      30,
+      99
+    ],
+    [
+      30,
+      102
+    ],
+    [
+      30,
+      104
+    ],
+    [
+      30,
+      107
+    ],
+    [
+      30,
+      128
+    ],
+    [
+      30,
+      141
+    ],
+    [
+      30,
+      148
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      31,
+      35
+    ],
+    [
+      31,
+      62
+    ],
+    [
+      31,
+      86
+    ],
+    [
+      31,
+      97
+    ],
+    [
+      31,
+      101
+    ],
+    [
+      31,
+      140
+    ],
+    [
+      32,
+      51
+    ],
+    [
+      32,
+      69
+    ],
+    [
+      32,
+      85
+    ],
+    [
+      32,
+      139
+    ],
+    [
+      33,
+      50
+    ],
+    [
+      33,
+      84
+    ],
+    [
+      33,
+      102
+    ],
+    [
+      33,
+      136
+    ],
+    [
+      33,
+      137
+    ],
+    [
+      33,
+      138
+    ],
+    [
+      34,
+      53
+    ],
+    [
+      34,
+      92
+    ],
+    [
+      34,
+      117
+    ],
+    [
+      34,
+      123
+    ],
+    [
+      34,
+      136
+    ],
+    [
+      35,
+      38
+    ],
+    [
+      35,
+      41
+    ],
+    [
+      35,
+      72
+    ],
+    [
+      35,
+      84
+    ],
+    [
+      35,
+      87
+    ],
+    [
+      35,
+      107
+    ],
+    [
+      35,
+      127
+    ],
+    [
+      35,
+      132
+    ],
+    [
+      35,
+      145
+    ],
+    [
+      36,
+      38
+    ],
+    [
+      36,
+      92
+    ],
+    [
+      36,
+      146
+    ],
+    [
+      37,
+      38
+    ],
+    [
+      37,
+      44
+    ],
+    [
+      37,
+      55
+    ],
+    [
+      37,
+      63
+    ],
+    [
+      37,
+      77
+    ],
+    [
+      37,
+      90
+    ],
+    [
+      37,
+      92
+    ],
+    [
+      37,
+      101
+    ],
+    [
+      37,
+      120
+    ],
+    [
+      37,
+      131
+    ],
+    [
+      37,
+      146
+    ],
+    [
+      37,
+      149
+    ],
+    [
+      38,
+      90
+    ],
+    [
+      38,
+      91
+    ],
+    [
+      38,
+      118
+    ],
+    [
+      38,
+      134
+    ],
+    [
+      38,
+      144
+    ],
+    [
+      38,
+      145
+    ],
+    [
+      39,
+      129
+    ],
+    [
+      39,
+      146
+    ],
+    [
+      40,
+      80
+    ],
+    [
+      40,
+      82
+    ],
+    [
+      40,
+      89
+    ],
+    [
+      40,
+      117
+    ],
+    [
+      40,
+      141
+    ],
+    [
+      41,
+      63
+    ],
+    [
+      41,
+      65
+    ],
+    [
+      41,
+      79
+    ],
+    [
+      41,
+      118
+    ],
+    [
+      41,
+      120
+    ],
+    [
+      41,
+      124
+    ],
+    [
+      41,
+      130
+    ],
+    [
+      41,
+      150
+    ],
+    [
+      42,
+      78
+    ],
+    [
+      42,
+      132
+    ],
+    [
+      42,
+      150
+    ],
+    [
+      44,
+      45
+    ],
+    [
+      44,
+      47
+    ],
+    [
+      44,
+      48
+    ],
+    [
+      44,
+      69
+    ],
+    [
+      44,
+      81
+    ],
+    [
+      44,
+      101
+    ],
+    [
+      44,
+      115
+    ],
+    [
+      44,
+      138
+    ],
+    [
+      45,
+      54
+    ],
+    [
+      45,
+      69
+    ],
+    [
+      45,
+      70
+    ],
+    [
+      45,
+      74
+    ],
+    [
+      45,
+      79
+    ],
+    [
+      45,
+      80
+    ],
+    [
+      45,
+      106
+    ],
+    [
+      45,
+      113
+    ],
+    [
+      45,
+      132
+    ],
+    [
+      45,
+      150
+    ],
+    [
+      46,
+      60
+    ],
+    [
+      46,
+      85
+    ],
+    [
+      46,
+      96
+    ],
+    [
+      46,
+      121
+    ],
+    [
+      46,
+      133
+    ],
+    [
+      46,
+      137
+    ],
+    [
+      46,
+      140
+    ],
+    [
+      47,
+      68
+    ],
+    [
+      47,
+      118
+    ],
+    [
+      48,
+      50
+    ],
+    [
+      48,
+      96
+    ],
+    [
+      48,
+      108
+    ],
+    [
+      48,
+      111
+    ],
+    [
+      48,
+      114
+    ],
+    [
+      48,
+      144
+    ],
+    [
+      49,
+      110
+    ],
+    [
+      49,
+      120
+    ],
+    [
+      49,
+      122
+    ],
+    [
+      49,
+      126
+    ],
+    [
+      50,
+      57
+    ],
+    [
+      50,
+      77
+    ],
+    [
+      50,
+      97
+    ],
+    [
+      50,
+      109
+    ],
+    [
+      50,
+      132
+    ],
+    [
+      50,
+      143
+    ],
+    [
+      51,
+      58
+    ],
+    [
+      51,
+      78
+    ],
+    [
+      51,
+      81
+    ],
+    [
+      51,
+      107
+    ],
+    [
+      51,
+      110
+    ],
+    [
+      51,
+      117
+    ],
+    [
+      51,
+      129
+    ],
+    [
+      51,
+      137
+    ],
+    [
+      52,
+      67
+    ],
+    [
+      52,
+      111
+    ],
+    [
+      52,
+      136
+    ],
+    [
+      52,
+      147
+    ],
+    [
+      52,
+      149
+    ],
+    [
+      53,
+      89
+    ],
+    [
+      53,
+      90
+    ],
+    [
+      53,
+      117
+    ],
+    [
+      54,
+      65
+    ],
+    [
+      54,
+      86
+    ],
+    [
+      54,
+      88
+    ],
+    [
+      54,
+      119
+    ],
+    [
+      55,
+      67
+    ],
+    [
+      55,
+      73
+    ],
+    [
+      55,
+      78
+    ],
+    [
+      55,
+      105
+    ],
+    [
+      55,
+      109
+    ],
+    [
+      55,
+      142
+    ],
+    [
+      55,
+      145
+    ],
+    [
+      56,
+      131
+    ],
+    [
+      56,
+      135
+    ],
+    [
+      57,
+      82
+    ],
+    [
+      57,
+      87
+    ],
+    [
+      57,
+      88
+    ],
+    [
+      57,
+      90
+    ],
+    [
+      57,
+      105
+    ],
+    [
+      57,
+      130
+    ],
+    [
+      57,
+      133
+    ],
+    [
+      58,
+      64
+    ],
+    [
+      58,
+      93
+    ],
+    [
+      58,
+      104
+    ],
+    [
+      58,
+      130
+    ],
+    [
+      58,
+      149
+    ],
+    [
+      59,
+      61
+    ],
+    [
+      59,
+      102
+    ],
+    [
+      60,
+      71
+    ],
+    [
+      61,
+      77
+    ],
+    [
+      61,
+      90
+    ],
+    [
+      61,
+      128
+    ],
+    [
+      62,
+      73
+    ],
+    [
+      62,
+      120
+    ],
+    [
+      62,
+      147
+    ],
+    [
+      63,
+      85
+    ],
+    [
+      63,
+      98
+    ],
+    [
+      63,
+      134
+    ],
+    [
+      63,
+      148
+    ],
+    [
+      64,
+      102
+    ],
+    [
+      64,
+      146
+    ],
+    [
+      65,
+      92
+    ],
+    [
+      65,
+      117
+    ],
+    [
+      65,
+      132
+    ],
+    [
+      65,
+      148
+    ],
+    [
+      66,
+      76
+    ],
+    [
+      66,
+      128
+    ],
+    [
+      67,
+      124
+    ],
+    [
+      67,
+      133
+    ],
+    [
+      67,
+      140
+    ],
+    [
+      67,
+      146
+    ],
+    [
+      68,
+      89
+    ],
+    [
+      68,
+      94
+    ],
+    [
+      68,
+      100
+    ],
+    [
+      68,
+      113
+    ],
+    [
+      68,
+      135
+    ],
+    [
+      69,
+      84
+    ],
+    [
+      69,
+      97
+    ],
+    [
+      69,
+      117
+    ],
+    [
+      69,
+      140
+    ],
+    [
+      70,
+      78
+    ],
+    [
+      70,
+      91
+    ],
+    [
+      70,
+      96
+    ],
+    [
+      70,
+      103
+    ],
+    [
+      70,
+      132
+    ],
+    [
+      70,
+      133
+    ],
+    [
+      70,
+      136
+    ],
+    [
+      70,
+      137
+    ],
+    [
+      70,
+      138
+    ],
+    [
+      71,
+      94
+    ],
+    [
+      71,
+      95
+    ],
+    [
+      71,
+      116
+    ],
+    [
+      72,
+      125
+    ],
+    [
+      72,
+      128
+    ],
+    [
+      72,
+      150
+    ],
+    [
+      73,
+      123
+    ],
+    [
+      74,
+      88
+    ],
+    [
+      74,
+      129
+    ],
+    [
+      74,
+      131
+    ],
+    [
+      74,
+      134
+    ],
+    [
+      75,
+      89
+    ],
+    [
+      76,
+      83
+    ],
+    [
+      76,
+      111
+    ],
+    [
+      76,
+      117
+    ],
+    [
+      77,
+      87
+    ],
+    [
+      77,
+      91
+    ],
+    [
+      77,
+      96
+    ],
+    [
+      77,
+      130
+    ],
+    [
+      77,
+      145
+    ],
+    [
+      78,
+      96
+    ],
+    [
+      78,
+      97
+    ],
+    [
+      78,
+      99
+    ],
+    [
+      78,
+      117
+    ],
+    [
+      78,
+      124
+    ],
+    [
+      78,
+      146
+    ],
+    [
+      78,
+      150
+    ],
+    [
+      79,
+      106
+    ],
+    [
+      79,
+      109
+    ],
+    [
+      79,
+      112
+    ],
+    [
+      79,
+      113
+    ],
+    [
+      79,
+      119
+    ],
+    [
+      79,
+      127
+    ],
+    [
+      80,
+      106
+    ],
+    [
+      80,
+      108
+    ],
+    [
+      80,
+      117
+    ],
+    [
+      80,
+      118
+    ],
+    [
+      80,
+      138
+    ],
+    [
+      80,
+      147
+    ],
+    [
+      81,
+      88
+    ],
+    [
+      81,
+      100
+    ],
+    [
+      81,
+      103
+    ],
+    [
+      81,
+      104
+    ],
+    [
+      81,
+      135
+    ],
+    [
+      82,
+      126
+    ],
+    [
+      82,
+      129
+    ],
+    [
+      84,
+      87
+    ],
+    [
+      84,
+      88
+    ],
+    [
+      84,
+      102
+    ],
+    [
+      84,
+      141
+    ],
+    [
+      84,
+      144
+    ],
+    [
+      85,
+      86
+    ],
+    [
+      85,
+      117
+    ],
+    [
+      85,
+      131
+    ],
+    [
+      85,
+      134
+    ],
+    [
+      85,
+      137
+    ],
+    [
+      85,
+      140
+    ],
+    [
+      86,
+      87
+    ],
+    [
+      86,
+      110
+    ],
+    [
+      86,
+      114
+    ],
+    [
+      86,
+      137
+    ],
+    [
+      86,
+      139
+    ],
+    [
+      87,
+      114
+    ],
+    [
+      87,
+      115
+    ],
+    [
+      87,
+      116
+    ],
+    [
+      87,
+      128
+    ],
+    [
+      87,
+      138
+    ],
+    [
+      87,
+      139
+    ],
+    [
+      87,
+      144
+    ],
+    [
+      88,
+      125
+    ],
+    [
+      89,
+      91
+    ],
+    [
+      89,
+      99
+    ],
+    [
+      89,
+      119
+    ],
+    [
+      89,
+      126
+    ],
+    [
+      89,
+      134
+    ],
+    [
+      90,
+      92
+    ],
+    [
+      90,
+      93
+    ],
+    [
+      90,
+      146
+    ],
+    [
+      91,
+      92
+    ],
+    [
+      91,
+      100
+    ],
+    [
+      91,
+      112
+    ],
+    [
+      91,
+      113
+    ],
+    [
+      91,
+      131
+    ],
+    [
+      91,
+      146
+    ],
+    [
+      92,
+      144
+    ],
+    [
+      92,
+      145
+    ],
+    [
+      93,
+      148
+    ],
+    [
+      94,
+      137
+    ],
+    [
+      95,
+      109
+    ],
+    [
+      95,
+      119
+    ],
+    [
+      95,
+      132
+    ],
+    [
+      95,
+      138
+    ],
+    [
+      95,
+      142
+    ],
+    [
+      95,
+      144
+    ],
+    [
+      96,
+      113
+    ],
+    [
+      96,
+      132
+    ],
+    [
+      96,
+      137
+    ],
+    [
+      96,
+      147
+    ],
+    [
+      97,
+      109
+    ],
+    [
+      97,
+      136
+    ],
+    [
+      98,
+      114
+    ],
+    [
+      98,
+      115
+    ],
+    [
+      99,
+      124
+    ],
+    [
+      99,
+      127
+    ],
+    [
+      99,
+      136
+    ],
+    [
+      100,
+      107
+    ],
+    [
+      100,
+      119
+    ],
+    [
+      100,
+      126
+    ],
+    [
+      100,
+      132
+    ],
+    [
+      100,
+      145
+    ],
+    [
+      101,
+      105
+    ],
+    [
+      101,
+      107
+    ],
+    [
+      101,
+      128
+    ],
+    [
+      101,
+      136
+    ],
+    [
+      101,
+      138
+    ],
+    [
+      102,
+      120
+    ],
+    [
+      102,
+      134
+    ],
+    [
+      102,
+      146
+    ],
+    [
+      103,
+      112
+    ],
+    [
+      103,
+      117
+    ],
+    [
+      104,
+      108
+    ],
+    [
+      104,
+      130
+    ],
+    [
+      104,
+      147
+    ],
+    [
+      106,
+      112
+    ],
+    [
+      107,
+      126
+    ],
+    [
+      108,
+      125
+    ],
+    [
+      108,
+      143
+    ],
+    [
+      109,
+      139
+    ],
+    [
+      109,
+      144
+    ],
+    [
+      109,
+      146
+    ],
+    [
+      110,
+      115
+    ],
+    [
+      110,
+      133
+    ],
+    [
+      112,
+      142
+    ],
+    [
+      113,
+      136
+    ],
+    [
+      114,
+      131
+    ],
+    [
+      115,
+      117
+    ],
+    [
+      116,
+      119
+    ],
+    [
+      116,
+      132
+    ],
+    [
+      116,
+      145
+    ],
+    [
+      116,
+      146
+    ],
+    [
+      117,
+      141
+    ],
+    [
+      118,
+      127
+    ],
+    [
+      120,
+      130
+    ],
+    [
+      120,
+      136
+    ],
+    [
+      122,
+      132
+    ],
+    [
+      122,
+      141
+    ],
+    [
+      124,
+      132
+    ],
+    [
+      125,
+      149
+    ],
+    [
+      125,
+      150
+    ],
+    [
+      126,
+      131
+    ],
+    [
+      129,
+      132
+    ],
+    [
+      130,
+      140
+    ],
+    [
+      130,
+      142
+    ],
+    [
+      131,
+      145
+    ],
+    [
+      132,
+      139
+    ],
+    [
+      132,
+      150
+    ],
+    [
+      133,
+      140
+    ],
+    [
+      135,
+      149
+    ],
+    [
+      136,
+      140
+    ],
+    [
+      138,
+      141
+    ],
+    [
+      139,
+      140
+    ],
+    [
+      143,
+      145
+    ],
+    [
+      144,
+      146
+    ],
+    [
+      144,
+      147
+    ],
+    [
+      145,
+      146
+    ],
+    [
+      145,
+      149
+    ],
+    [
+      148,
+      150
+    ]
+  ]
+}

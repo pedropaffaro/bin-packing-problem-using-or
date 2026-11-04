@@ -1,0 +1,31 @@
+presolving:
+(round 1, exhaustive) 0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 84299 upgd conss, 0 impls, 84000 clqs, 0 implints
+   (7.2s) probing: 650/22950 (2.8%) - 0 fixings, 0 aggregations, 1350 implications, 0 bound changes
+   (7.2s) probing aborted: 50/50 successive totally useless probings
+   (7.2s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (7.3s) no symmetry present (symcode time: 0.02)
+presolving (2 rounds: 2 fast, 2 medium, 2 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 85350 cliques, 0 implied integral variables (0 bin, 0 int, 0 cont)
+presolved problem has 22950 variables (22950 bin, 0 int, 0 cont) and 84449 constraints
+    299 constraints of type <knapsack>
+  84000 constraints of type <setppc>
+    150 constraints of type <linear>
+transformed objective value is always integral (scale: 0.05)
+Presolving Time: 7.13
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+p 7.6s|     1 |     0 |    61 |     - |  clique|   0 |  22k|  84k|  84k|   0 |  0 |   0 |   0 | 0.000000e+00 | 2.555000e+01 |    Inf | unknown
+ 29.4s|     1 |     0 | 20194 |     - |   368M |   0 |  22k|  84k|  84k|   0 |  0 |  50 |   0 | 1.916873e+01 | 2.555000e+01 |  33.29%| unknown
+ 36.6s|     1 |     0 | 29304 |     - |   388M |   0 |  22k|  84k|  84k| 135 |  1 |  50 |   0 | 1.916873e+01 | 2.555000e+01 |  33.29%| unknown
+ 48.0s|     1 |     0 | 40770 |     - |   398M |   0 |  22k|  84k|  84k| 272 |  2 |  50 |   0 | 1.916873e+01 | 2.555000e+01 |  33.29%| unknown
+ 55.9s|     1 |     0 | 50370 |     - |   410M |   0 |  22k|  84k|  84k| 406 |  3 |  50 |   0 | 1.916873e+01 | 2.555000e+01 |  33.29%| unknown
+ 60.0s|     1 |     0 | 54717 |     - |   424M |   0 |  22k|  84k|  84k| 515 |  4 |  50 |   0 | 1.916873e+01 | 2.555000e+01 |  33.29%| unknown
+(node 1) LP solver hit time limit in LP 6 -- using pseudo solution instead
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 60.00
+Solving Nodes      : 1
+Primal Bound       : +2.55500000000000e+01 (1 solutions)
+Dual Bound         : +1.91687272727273e+01
+Gap                : 33.29 %

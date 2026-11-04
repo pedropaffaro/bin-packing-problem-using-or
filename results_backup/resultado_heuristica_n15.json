@@ -1,0 +1,160 @@
+{
+  "instancia": {
+    "arquivo": "instancia_saches_n15.json",
+    "n_itens": 15,
+    "m_saches_disponiveis": 15,
+    "N_max": 5,
+    "n_conflitos": 5,
+    "seed_instancia": 57
+  },
+  "configuracao_solver": {
+    "solver": "Heurística FFD adaptada",
+    "deterministica": true,
+    "seed": null,
+    "threads": 1,
+    "time_limit_s": null
+  },
+  "status": "FEASIBLE_HEURISTIC",
+  "tem_solucao_factivel": true,
+  "verificacao": {
+    "todos_itens_alocados_uma_vez": true,
+    "capacidade": true,
+    "cardinalidade": true,
+    "conflitos": true
+  },
+  "tempo_execucao_s": 2.9e-05,
+  "nos_explorados": null,
+  "limitantes_inferiores_simples": {
+    "cardinalidade": 3,
+    "volume": 2
+  },
+  "custo_total": 3.15,
+  "limitante_inferior_custo": null,
+  "gap_otimalidade_pct": null,
+  "n_saches_utilizados": 4,
+  "saches": [
+    {
+      "id_sache": 1,
+      "tipo_id": 3,
+      "tipo_nome": "Grande",
+      "custo": 1.3,
+      "capacidade_cm3": 70.0,
+      "volume_ocupado_cm3": 57.0,
+      "taxa_ocupacao_pct": 81.43,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 1,
+          "nome": "Whey Protein Concentrado",
+          "volume_cm3": 25.0
+        },
+        {
+          "id": 2,
+          "nome": "Colágeno Hidrolisado",
+          "volume_cm3": 12.0
+        },
+        {
+          "id": 9,
+          "nome": "BCAA 2:1:1",
+          "volume_cm3": 8.0
+        },
+        {
+          "id": 3,
+          "nome": "Creatina Monohidratada",
+          "volume_cm3": 6.0
+        },
+        {
+          "id": 13,
+          "nome": "Peptídeos de Glutamina",
+          "volume_cm3": 6.0
+        }
+      ]
+    },
+    {
+      "id_sache": 2,
+      "tipo_id": 2,
+      "tipo_nome": "Médio",
+      "custo": 0.85,
+      "capacidade_cm3": 35.0,
+      "volume_ocupado_cm3": 25.5,
+      "taxa_ocupacao_pct": 72.86,
+      "n_itens": 5,
+      "itens": [
+        {
+          "id": 4,
+          "nome": "L-Glutamina",
+          "volume_cm3": 7.0
+        },
+        {
+          "id": 6,
+          "nome": "L-Arginina",
+          "volume_cm3": 5.0
+        },
+        {
+          "id": 12,
+          "nome": "Glicina em Pó",
+          "volume_cm3": 5.0
+        },
+        {
+          "id": 5,
+          "nome": "Beta-Alanina",
+          "volume_cm3": 4.5
+        },
+        {
+          "id": 10,
+          "nome": "HMB (β-Hidroxi-β-Metilbutirato)",
+          "volume_cm3": 4.0
+        }
+      ]
+    },
+    {
+      "id_sache": 3,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 12.0,
+      "taxa_ocupacao_pct": 80.0,
+      "n_itens": 4,
+      "itens": [
+        {
+          "id": 14,
+          "nome": "L-Leucina Isolada",
+          "volume_cm3": 4.0
+        },
+        {
+          "id": 7,
+          "nome": "L-Carnitina em Pó",
+          "volume_cm3": 3.5
+        },
+        {
+          "id": 8,
+          "nome": "Taurina",
+          "volume_cm3": 3.0
+        },
+        {
+          "id": 15,
+          "nome": "Alpha-GPC 50%",
+          "volume_cm3": 1.5
+        }
+      ]
+    },
+    {
+      "id_sache": 4,
+      "tipo_id": 1,
+      "tipo_nome": "Pequeno",
+      "custo": 0.5,
+      "capacidade_cm3": 15.0,
+      "volume_ocupado_cm3": 1.0,
+      "taxa_ocupacao_pct": 6.67,
+      "n_itens": 1,
+      "itens": [
+        {
+          "id": 11,
+          "nome": "L-Teanina",
+          "volume_cm3": 1.0
+        }
+      ]
+    }
+  ]
+}

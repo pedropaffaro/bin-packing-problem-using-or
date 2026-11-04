@@ -1,12 +1,15 @@
 import json
 import math
+import os
 import time
 import pyscipopt
 from pyscipopt import Model, quicksum
 
+PASTA_RESULTADOS = "results"
 
 def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
-                         seed: int = 0, caminho_saida: str = None):
+                         seed: int = 0, caminho_saida: str = None,
+                         sufixo: str = ""):
     """
     Resolve o Problema de Empacotamento de Sachês Personalizados via SCIP (PySCIPOpt)
     e salva os resultados em um arquivo JSON (mesmo formato usado no gurobi.py).
@@ -16,7 +19,8 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
         time_limit (float): Limite de tempo de execução em segundos.
         seed (int): Semente do SCIP (parâmetro randomization/randomseedshift).
         caminho_saida (str): Arquivo JSON de saída. Se None, usa
-            "resultado_scip_n{n}_seed{seed}.json".
+            "results/resultado_scip_n{n}_seed{seed}{sufixo}.json".
+        sufixo (str): Texto acrescentado ao nome dos arquivos de saída e de log.
 
     Retorna:
         dict com os resultados (o mesmo conteúdo salvo no JSON).
@@ -43,11 +47,15 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
     E = dados['conflicts']
     J = list(range(1, m + 1))
 
+    os.makedirs(PASTA_RESULTADOS, exist_ok=True)
+    caminho_log = os.path.join(PASTA_RESULTADOS, f"log_scip_n{n}_seed{seed}{sufixo}.txt")
+
     # 2. Inicialização do Modelo SCIP
     model = Model("BPP_Saches_Personalizados")
     model.setParam("limits/time", time_limit)
     model.setParam("randomization/randomseedshift", seed)
     # model.hideOutput()  # Descomentar para ocultar o log do SCIP na consola
+    model.setLogfile(caminho_log)  # salva o log do solver em arquivo
 
     # 3. Variáveis de Decisão Binárias
     # x[i, j] = 1 se o item i é alocado no sachê j
@@ -133,7 +141,7 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
 
     resultado = {
         "instancia": {
-            "arquivo": caminho_json,
+            "arquivo": os.path.basename(caminho_json),
             "n_itens": n,
             "m_saches_disponiveis": m,
             "N_max": N_max,
@@ -205,7 +213,9 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
 
     # 8. Salvamento em JSON
     if caminho_saida is None:
-        caminho_saida = f"resultado_scip_n{n}_seed{seed}.json"
+        caminho_saida = os.path.join(
+            PASTA_RESULTADOS, f"resultado_scip_n{n}_seed{seed}{sufixo}.json")
+    os.makedirs(os.path.dirname(caminho_saida) or ".", exist_ok=True)
     with open(caminho_saida, 'w', encoding='utf-8') as f:
         json.dump(resultado, f, indent=2, ensure_ascii=False)
 
@@ -223,16 +233,16 @@ def resolver_saches_scip(caminho_json: str, time_limit: float = 60.0,
     else:
         print("Nenhuma solução factível foi encontrada no tempo limite fornecido.")
     print(f"Resultados salvos em: {caminho_saida}")
+    print(f"Log do solver em    : {caminho_log}")
     print("=" * 60)
 
     return resultado
-
 
 if __name__ == "__main__":
     # Testar com as instâncias geradas (n=15, 50, 150)
     for n_inst in [15, 50, 150]:
         resolver_saches_scip(
-            f"instancia_saches_n{n_inst}.json",
+            os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n_inst}.json"),
             time_limit=60,
             seed=0,
         )

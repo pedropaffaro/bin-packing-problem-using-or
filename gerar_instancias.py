@@ -1,7 +1,11 @@
 import json
+import os
 import random
+import sys
 
-# Base de dados com 55 suplementos reais e diversas categorias funcionais
+PASTA_RESULTADOS = "results"
+
+# Base de dados com 54 suplementos reais e diversas categorias funcionais
 SUPPLEMENT_DATABASE = [
     # Proteínas e Aminoácidos
     {"name": "Whey Protein Concentrado", "volume": 25.0, "category": "protein"},
@@ -121,8 +125,11 @@ def generate_conflicts(items, conflict_density=0.05, seed=42):
                     break
 
     target_conflicts = int(n * (n - 1) / 2 * conflict_density)
+    # O limite de tentativas cresce com a meta de conflitos. Para n = 15, 50 e 150
+    # ele nunca é atingido, então as instâncias geradas não mudam.
+    max_attempts = max(10000, 20 * target_conflicts)
     attempts = 0
-    while len(conflicts) < target_conflicts and attempts < 10000:
+    while len(conflicts) < target_conflicts and attempts < max_attempts:
         attempts += 1
         i = rng.randint(1, n)
         j = rng.randint(1, n)
@@ -155,9 +162,14 @@ def build_instance(n_items, seed=42):
     }
 
 if __name__ == "__main__":
-    for n in [15, 50, 150]:
+    # Uso: python gerar_instancias.py            -> n = 15, 50, 150
+    #      python gerar_instancias.py 300 500    -> tamanhos escolhidos
+    tamanhos = [int(a) for a in sys.argv[1:]] or [15, 50, 150]
+    os.makedirs(PASTA_RESULTADOS, exist_ok=True)
+    for n in tamanhos:
         inst = build_instance(n_items=n, seed=42 + n)
-        file_name = f"instancia_saches_n{n}.json"
+        file_name = os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n}.json")
         with open(file_name, "w", encoding="utf-8") as f:
             json.dump(inst, f, indent=2, ensure_ascii=False)
-        print(f"Instância n={n} atualizada: {len(inst['items'])} itens, {len(inst['conflicts'])} conflitos.")
+        print(f"Instância n={n} gerada em {file_name}: "
+              f"{len(inst['items'])} itens, {len(inst['conflicts'])} conflitos.")

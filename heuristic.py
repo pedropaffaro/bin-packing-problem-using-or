@@ -1,18 +1,22 @@
 import json
 import math
+import os
+import sys
 import time
 
+PASTA_RESULTADOS = "results"
 
 def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
     """
     Resolve o Problema de Empacotamento de Sachês Personalizados via
-    Heurística Construtiva Adaptada: First-Fit Decreasing (FFD) com Seleção Ótima de Tamanho,
+    heurística construtiva FFDC (First-Fit Decreasing with Conflicts): FFD com
+    verificação de conflitos e dimensionamento pelo menor tipo viável de sachê,
     e salva os resultados em um arquivo JSON (mesmo formato usado em gurobi.py e scip.py).
 
     Parâmetros:
         caminho_json (str): Caminho para o ficheiro JSON da instância.
         caminho_saida (str): Arquivo JSON de saída. Se None, usa
-            "resultado_heuristica_n{n}.json".
+            "results/resultado_heuristica_n{n}.json".
 
     Retorna:
         dict com os resultados (o mesmo conteúdo salvo no JSON).
@@ -63,7 +67,7 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
         reverse=True
     )
 
-    # 3. Algoritmo Guloso de Alocação (First-Fit Decreasing Adaptado)
+    # 3. Algoritmo Guloso de Alocação (First-Fit Decreasing com Conflitos)
     saches = []  # Lista de dicionários representando cada sachê aberto
 
     for item in itens_ordenados:
@@ -98,7 +102,7 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
                 'volume_total': vol_item
             })
 
-    # 4. Dimensionamento e Atribuição do Tamanho de Mínimo Custo por Sachê
+    # 4. Dimensionamento: atribui a cada sachê o menor tipo que comporta o volume
     custo_total = 0.0
     for sache in saches:
         vol_tot = sache['volume_total']
@@ -113,7 +117,7 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
 
     elapsed_time = time.time() - start_time
 
-    # 5. Verificação independente da factibilidade (recalcula as restrições da solução)
+    # 5. Verificação da factibilidade (recalcula as restrições da solução)
     todos_itens = [i for s in saches for i in s['itens']]
     verif_alocacao = sorted(todos_itens) == sorted(v.keys())
     verif_capacidade = all(s['volume_total'] <= V_max[s['tipo']] + 1e-9 for s in saches)
@@ -133,7 +137,7 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
 
     resultado = {
         "instancia": {
-            "arquivo": caminho_json,
+            "arquivo": os.path.basename(caminho_json),
             "n_itens": n,
             "m_saches_disponiveis": dados['metadata'].get('max_sachets_m'),
             "N_max": N_max,
@@ -141,7 +145,7 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
             "seed_instancia": dados['metadata'].get('seed'),
         },
         "configuracao_solver": {
-            "solver": "Heurística FFD adaptada",
+            "solver": "Heurística FFDC",
             "deterministica": True,
             "seed": None,
             "threads": 1,
@@ -189,13 +193,14 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
 
     # 7. Salvamento em JSON
     if caminho_saida is None:
-        caminho_saida = f"resultado_heuristica_n{n}.json"
+        caminho_saida = os.path.join(PASTA_RESULTADOS, f"resultado_heuristica_n{n}.json")
+    os.makedirs(os.path.dirname(caminho_saida) or ".", exist_ok=True)
     with open(caminho_saida, 'w', encoding='utf-8') as f:
         json.dump(resultado, f, indent=2, ensure_ascii=False)
 
     # 8. Resumo na consola
     print("\n" + "=" * 60)
-    print(f"RELATÓRIO DE DESEMPENHO - HEURÍSTICA FFD (Instância: {caminho_json})")
+    print(f"RELATÓRIO DE DESEMPENHO - HEURÍSTICA FFDC (Instância: {caminho_json})")
     print("=" * 60)
     print(f"Status da Solução : {resultado['status']}")
     print(f"Valor da F.O. (Custo) : R$ {custo_total:.2f}")
@@ -209,6 +214,9 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
 
 
 if __name__ == "__main__":
-    # Testar com as instâncias geradas (n=15, 50, 150)
-    for n_inst in [15, 50, 150]:
-        resolver_saches_heuristica(f"instancia_saches_n{n_inst}.json")
+    # Uso: python heuristic.py            -> n = 15, 50, 150
+    #      python heuristic.py 300 500    -> tamanhos escolhidos (instâncias já geradas)
+    tamanhos = [int(a) for a in sys.argv[1:]] or [15, 50, 150]
+    for n_inst in tamanhos:
+        resolver_saches_heuristica(
+            os.path.join(PASTA_RESULTADOS, f"instancia_saches_n{n_inst}.json"))

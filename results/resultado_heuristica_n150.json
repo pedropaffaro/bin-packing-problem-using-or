@@ -22,7 +22,7 @@
     "cardinalidade": true,
     "conflitos": true
   },
-  "tempo_execucao_s": 0.000243,
+  "tempo_execucao_s": 0.000437,
   "nos_explorados": null,
   "limitantes_inferiores_simples": {
     "cardinalidade": 30,

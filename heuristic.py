@@ -40,7 +40,12 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
     cap_max_absoluta = max(V_max.values())
 
     # Construção de um grafo de conflitos rápido (Set de pares ordenados)
+
     E = dados['conflicts']
+
+    # start_time equivalente ao model.optimize() do Gurobi/SCIP, contando o pré-processamento algorítmico (grafo de conflitos) + o próprio FFDC
+    start_time = time.time()
+    
     conflitos_set = set()
     grau_conflito = {it['id']: 0 for it in itens}
     for i1, i2 in E:
@@ -57,8 +62,6 @@ def resolver_saches_heuristica(caminho_json: str, caminho_saida: str = None):
             if par in conflitos_set:
                 return True
         return False
-
-    start_time = time.time()
 
     # 2. Ordenação dos Itens (FFD: Prioriza volume decrescente e grau de conflito)
     itens_ordenados = sorted(

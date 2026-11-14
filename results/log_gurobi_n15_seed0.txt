@@ -1,5 +1,5 @@
 
-Gurobi 13.0.3 (linux64) logging started Fri Nov 13 20:45:27 2026
+Gurobi 13.0.3 (linux64) logging started Fri Nov 13 21:11:04 2026
 
 Set parameter LogFile to value "results/log_gurobi_n15_seed0.txt"
 Gurobi Optimizer version 13.0.3 build v13.0.3rc0 (linux64 - "Pop!_OS 22.04 LTS")

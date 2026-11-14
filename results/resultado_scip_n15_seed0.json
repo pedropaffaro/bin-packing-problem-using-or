@@ -17,8 +17,8 @@
   },
   "status": "OPTIMAL",
   "tem_solucao_factivel": true,
-  "tempo_execucao_s": 0.8033,
-  "tempo_runtime_scip_s": 0.8031,
+  "tempo_execucao_s": 0.9953,
+  "tempo_runtime_scip_s": 0.9952,
   "nos_explorados": 26,
   "limitantes_inferiores_simples": {
     "cardinalidade": 3,

@@ -17,8 +17,8 @@
   "status": "TIME_LIMIT",
   "status_code": 9,
   "tem_solucao_factivel": true,
-  "tempo_execucao_s": 60.0181,
-  "tempo_runtime_gurobi_s": 60.0069,
+  "tempo_execucao_s": 60.0185,
+  "tempo_runtime_gurobi_s": 60.0064,
   "nos_explorados": 464.0,
   "limitantes_inferiores_simples": {
     "cardinalidade": 30,

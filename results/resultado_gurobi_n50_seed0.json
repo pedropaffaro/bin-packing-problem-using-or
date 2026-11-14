@@ -17,8 +17,8 @@
   "status": "OPTIMAL",
   "status_code": 2,
   "tem_solucao_factivel": true,
-  "tempo_execucao_s": 3.1891,
-  "tempo_runtime_gurobi_s": 3.1885,
+  "tempo_execucao_s": 3.7285,
+  "tempo_runtime_gurobi_s": 3.7278,
   "nos_explorados": 1021.0,
   "limitantes_inferiores_simples": {
     "cardinalidade": 10,
